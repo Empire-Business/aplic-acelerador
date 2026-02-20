@@ -1,0 +1,12 @@
+{
+  "name": "acelerador-audiencia",
+  "version": "1.0.0",
+  "description": "Acelerador de Audiência - Empire Business",
+  "scripts": {
+    "dev": "npx serve -l 3000",
+    "start": "npx serve -l 3000"
+  },
+  "keywords": ["landing-page", "empire", "marketing"],
+  "author": "Empire Business",
+  "license": "MIT"
+}

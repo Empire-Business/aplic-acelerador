@@ -1,5 +1,23 @@
+# Dependencies
+node_modules/
+
+# OS files
 .DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
 .claude/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Vercel
+.vercel
+
+# Project specific
 Founders/
 logoempire/
 copy-acelerador-audiencia.md

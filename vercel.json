@@ -1,4 +1,15 @@
 {
+  "version": 2,
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/mapa-invisivel",
+      "destination": "/mapa-invisivel.html"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -9,7 +20,7 @@
         },
         {
           "key": "X-Frame-Options",
-          "value": "DENY"
+          "value": "SAMEORIGIN"
         },
         {
           "key": "X-XSS-Protection",
@@ -19,6 +30,24 @@
     },
     {
       "source": "/images/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/evento/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/Marcas/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
