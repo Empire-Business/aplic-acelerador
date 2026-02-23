@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WPGPLJSL');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/webp" href="images/logos/Logotipo 04.webp">
+  <title>Obrigado pela sua Aplicação — Acelerador de Audiência</title>
+  <meta name="description" content="Sua aplicação foi recebida. Enquanto isso, acompanhe nosso canal exclusivo no Instagram com conteúdos sobre autoridade e crescimento.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0a0a0b">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.instagram.com">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            empire: {
+              bg: '#0a0a0b',
+              surface: '#111113',
+              card: '#18181b',
+              border: '#27272a',
+              muted: '#71717a',
+              text: '#fafafa',
+              gold: '#c9a962',
+              goldLight: '#e4d4a5',
+              goldDark: '#9a7b3c',
+            }
+          },
+          fontFamily: {
+            display: ['Cormorant Garamond', 'serif'],
+            body: ['DM Sans', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --gold-gradient: linear-gradient(135deg, #c9a962 0%, #e4d4a5 50%, #c9a962 100%);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: #0a0a0b;
+      color: #fafafa;
+    }
+
+    .font-display { font-family: 'Cormorant Garamond', serif; }
+
+    .text-gold-gradient {
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .grid-pattern {
+      background-image:
+        linear-gradient(rgba(201, 169, 98, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201, 169, 98, 0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #0a0a0b; }
+    ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #c9a962; }
+
+    /* Pulse check */
+    @keyframes pulse-check {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    .pulse-check { animation: pulse-check 2s ease-in-out infinite; }
+
+    /* Fade in */
+    .fade-in { animation: fadeIn 0.8s ease forwards; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in-delay-1 { animation-delay: 0.2s; opacity: 0; }
+    .fade-in-delay-2 { animation-delay: 0.4s; opacity: 0; }
+    .fade-in-delay-3 { animation-delay: 0.6s; opacity: 0; }
+
+    /* Instagram CTA button */
+    .btn-instagram {
+      background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+      color: #fff;
+      font-weight: 600;
+      padding: 1rem 2.5rem;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .btn-instagram::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s ease;
+    }
+    .btn-instagram:hover::before { left: 100%; }
+    .btn-instagram:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 40px rgba(131, 58, 180, 0.3);
+    }
+
+    /* Instagram icon glow */
+    .insta-icon-wrapper {
+      position: relative;
+    }
+    .insta-icon-wrapper::after {
+      content: '';
+      position: absolute;
+      inset: -20px;
+      background: radial-gradient(ellipse, rgba(131,58,180,0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      z-index: 0;
+    }
+
+    /* Content benefit cards */
+    .benefit-card {
+      transition: all 0.3s ease;
+    }
+    .benefit-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(201, 169, 98, 0.3) !important;
+    }
+  </style>
+</head>
+<body class="bg-empire-bg text-empire-text antialiased">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WPGPLJSL"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-empire-bg/80 backdrop-blur-md border-b border-empire-border">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center">
+          <img src="images/logos/Logotipo 04.webp" alt="Acelerador de Audiência" class="h-10 w-auto" width="160" height="40" fetchpriority="high">
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <div class="grid-pattern absolute inset-0 z-0"></div>
+    <div class="absolute inset-0 z-0" style="background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(201,169,98,0.05) 0%, transparent 70%);"></div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 py-24 text-center">
+
+      <!-- Success badge -->
+      <div class="fade-in inline-flex items-center justify-center w-20 h-20 rounded-full bg-empire-gold/10 border border-empire-gold/30 mb-8 mx-auto pulse-check">
+        <svg class="w-10 h-10 text-empire-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7"/>
+        </svg>
+      </div>
+
+      <!-- Headline -->
+      <div class="fade-in fade-in-delay-1">
+        <p class="text-empire-gold text-sm tracking-widest uppercase mb-4">Aplicação Recebida</p>
+        <h1 class="font-display text-4xl md:text-6xl lg:text-7xl font-semibold tracking-tight mb-6">
+          <span class="text-empire-text">Obrigado pela</span><br>
+          <span class="text-gold-gradient">sua aplicação</span>
+        </h1>
+        <p class="text-xl text-empire-muted max-w-2xl mx-auto mb-12 font-light leading-relaxed">
+          Recebemos sua inscrição. Enquanto nosso time analisa seu perfil, temos algo especial para você continuar evoluindo.
+        </p>
+      </div>
+
+      <!-- Instagram CTA Block -->
+      <div class="fade-in fade-in-delay-2">
+        <div class="bg-empire-card border border-empire-border rounded-lg p-8 md:p-12 max-w-2xl mx-auto">
+
+          <!-- Instagram icon -->
+          <div class="insta-icon-wrapper inline-flex items-center justify-center mb-8">
+            <div class="relative z-10 w-24 h-24 rounded-2xl flex items-center justify-center" style="background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);">
+              <!-- Instagram SVG icon -->
+              <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-empire-gold/30 bg-empire-gold/5 mb-6">
+            <span class="w-2 h-2 bg-empire-gold rounded-full animate-pulse"></span>
+            <span class="text-empire-gold text-xs tracking-widest uppercase">Canal Exclusivo</span>
+          </div>
+
+          <h2 class="font-display text-2xl md:text-3xl text-empire-text mb-4">
+            Entre no nosso <span class="text-gold-gradient">Canal do Instagram</span>
+          </h2>
+          <p class="text-empire-muted mb-8 leading-relaxed max-w-lg mx-auto">
+            Acesse conteúdos exclusivos sobre autoridade digital, distribuição de conteúdo e crescimento de audiência — direto no seu Instagram.
+          </p>
+
+          <a
+            href="https://www.instagram.com/channel/AbYk6x_jVKF6WsIC/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-instagram text-base tracking-wide"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+            ENTRAR NO CANAL AGORA
+          </a>
+
+          <p class="text-empire-muted text-xs mt-4">Gratuito · Exclusivo para membros do canal</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- What's inside the channel -->
+  <section class="py-24 md:py-32 bg-empire-surface relative">
+    <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-empire-gold/30 to-transparent"></div>
+    <div class="max-w-5xl mx-auto px-6 lg:px-8">
+
+      <div class="text-center mb-16">
+        <p class="text-empire-gold text-sm tracking-widest uppercase mb-4">O que você vai encontrar</p>
+        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl mb-4">
+          Conteúdo que <span class="text-gold-gradient">transforma</span>
+        </h2>
+        <p class="text-empire-muted text-lg max-w-2xl mx-auto">
+          No canal, compartilhamos o que realmente funciona para construir autoridade e crescer audiência de forma consistente.
+        </p>
+      </div>
+
+      <!-- Benefits grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Benefit 1 -->
+        <div class="benefit-card bg-empire-card p-7 border border-empire-border rounded-lg">
+          <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-5" style="background: linear-gradient(135deg, rgba(131,58,180,0.15), rgba(253,29,29,0.1));">
+            <svg class="w-6 h-6 text-empire-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.069A1 1 0 0121 8.82v6.36a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-medium text-empire-text mb-2">Bastidores Reais</h3>
+          <p class="text-empire-muted text-sm leading-relaxed">Vídeos exclusivos mostrando como construímos autoridade para CEOs e especialistas — o que funciona de verdade, sem filtro.</p>
+        </div>
+
+        <!-- Benefit 2 -->
+        <div class="benefit-card bg-empire-card p-7 border border-empire-border rounded-lg">
+          <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-5" style="background: linear-gradient(135deg, rgba(131,58,180,0.15), rgba(253,29,29,0.1));">
+            <svg class="w-6 h-6 text-empire-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-medium text-empire-text mb-2">Estratégias de Distribuição</h3>
+          <p class="text-empire-muted text-sm leading-relaxed">Como amplificar sua mensagem para chegar nas pessoas certas, com a frequência certa — sem depender de tráfego pago.</p>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="benefit-card bg-empire-card p-7 border border-empire-border rounded-lg">
+          <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-5" style="background: linear-gradient(135deg, rgba(131,58,180,0.15), rgba(253,29,29,0.1));">
+            <svg class="w-6 h-6 text-empire-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-medium text-empire-text mb-2">Cases de Crescimento</h3>
+          <p class="text-empire-muted text-sm leading-relaxed">Análises detalhadas de como nossos clientes saíram de invisíveis a referências reconhecidas — com números reais.</p>
+        </div>
+
+        <!-- Benefit 4 -->
+        <div class="benefit-card bg-empire-card p-7 border border-empire-border rounded-lg">
+          <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-5" style="background: linear-gradient(135deg, rgba(131,58,180,0.15), rgba(253,29,29,0.1));">
+            <svg class="w-6 h-6 text-empire-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-medium text-empire-text mb-2">Frameworks Exclusivos</h3>
+          <p class="text-empire-muted text-sm leading-relaxed">Os mesmos frameworks que usamos com nossos clientes premium — adaptados para você aplicar no seu negócio agora.</p>
+        </div>
+
+        <!-- Benefit 5 -->
+        <div class="benefit-card bg-empire-card p-7 border border-empire-border rounded-lg">
+          <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-5" style="background: linear-gradient(135deg, rgba(131,58,180,0.15), rgba(253,29,29,0.1));">
+            <svg class="w-6 h-6 text-empire-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-medium text-empire-text mb-2">Comunidade de Líderes</h3>
+          <p class="text-empire-muted text-sm leading-relaxed">Acesse uma rede de CEOs e especialistas que estão construindo autoridade de forma séria — troque experiências e aprenda com quem está na prática.</p>
+        </div>
+
+        <!-- Benefit 6 -->
+        <div class="benefit-card bg-empire-card p-7 border border-empire-border rounded-lg">
+          <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-5" style="background: linear-gradient(135deg, rgba(131,58,180,0.15), rgba(253,29,29,0.1));">
+            <svg class="w-6 h-6 text-empire-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-medium text-empire-text mb-2">Novidades em Primeira Mão</h3>
+          <p class="text-empire-muted text-sm leading-relaxed">Seja o primeiro a saber sobre novas vagas, eventos e conteúdos do Acelerador de Audiência — antes de qualquer outra pessoa.</p>
+        </div>
+
+      </div>
+
+      <!-- Bottom CTA -->
+      <div class="mt-16 text-center">
+        <a
+          href="https://www.instagram.com/channel/AbYk6x_jVKF6WsIC/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-instagram text-base tracking-wide"
+        >
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+          QUERO ACESSAR O CANAL
+        </a>
+        <p class="text-empire-muted text-sm mt-4">É gratuito. Basta clicar e entrar.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 bg-empire-bg border-t border-empire-border">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-4">
+          <img src="images/logos/Logotipo 04.webp" alt="Acelerador de Audiência" class="h-8 w-auto" loading="lazy" width="128" height="32">
+        </div>
+        <p class="text-empire-muted text-sm">
+          © 2026 Acelerador de Audiência. Todos os direitos reservados.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

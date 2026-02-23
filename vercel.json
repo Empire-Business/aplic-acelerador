@@ -16,6 +16,10 @@
     {
       "source": "/obrigado-auto",
       "destination": "/obrigado-auto.html"
+    },
+    {
+      "source": "/obrigado",
+      "destination": "/obrigado.html"
     }
   ],
   "headers": [
