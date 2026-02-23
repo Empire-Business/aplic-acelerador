@@ -8,6 +8,14 @@
     {
       "source": "/mapa-invisivel",
       "destination": "/mapa-invisivel.html"
+    },
+    {
+      "source": "/obrigado-mql",
+      "destination": "/obrigado-mql.html"
+    },
+    {
+      "source": "/obrigado-auto",
+      "destination": "/obrigado-auto.html"
     }
   ],
   "headers": [

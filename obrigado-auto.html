@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WPGPLJSL');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/webp" href="images/logos/Logotipo 04.webp">
+  <title>Agende sua Conversa Estratégica — Acelerador de Audiência</title>
+  <meta name="description" content="Sua aplicação foi recebida. Agende agora sua conversa estratégica com um consultor da Empire Business.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0a0a0b">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://l.empirebusiness.com.br">
+  <link rel="preconnect" href="https://l.empirebusiness.com.br" crossorigin>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            empire: {
+              bg: '#0a0a0b',
+              surface: '#111113',
+              card: '#18181b',
+              border: '#27272a',
+              muted: '#71717a',
+              text: '#fafafa',
+              gold: '#c9a962',
+              goldLight: '#e4d4a5',
+              goldDark: '#9a7b3c',
+            }
+          },
+          fontFamily: {
+            display: ['Cormorant Garamond', 'serif'],
+            body: ['DM Sans', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --gold-gradient: linear-gradient(135deg, #c9a962 0%, #e4d4a5 50%, #c9a962 100%);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: #0a0a0b;
+      color: #fafafa;
+    }
+
+    .font-display {
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    .text-gold-gradient {
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .border-gold-gradient {
+      border: 1px solid transparent;
+      background: linear-gradient(#18181b, #18181b) padding-box,
+                  linear-gradient(135deg, #c9a962, #e4d4a5, #c9a962) border-box;
+    }
+
+    .grid-pattern {
+      background-image:
+        linear-gradient(rgba(201, 169, 98, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201, 169, 98, 0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #0a0a0b; }
+    ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #c9a962; }
+
+    /* Pulse animation for checkmark */
+    @keyframes pulse-check {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    .pulse-check {
+      animation: pulse-check 2s ease-in-out infinite;
+    }
+
+    /* Fade in animations */
+    .fade-in {
+      animation: fadeIn 0.8s ease forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in-delay-1 { animation-delay: 0.2s; opacity: 0; }
+    .fade-in-delay-2 { animation-delay: 0.4s; opacity: 0; }
+    .fade-in-delay-3 { animation-delay: 0.6s; opacity: 0; }
+
+    /* Calendar iframe container */
+    .calendar-wrapper {
+      background: #18181b;
+      border: 1px solid rgba(201, 169, 98, 0.2);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    /* Step connector for mobile */
+    .step-connector:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 2rem;
+      background: linear-gradient(180deg, rgba(201, 169, 98, 0.4), transparent);
+    }
+    @media (min-width: 768px) {
+      .step-connector:not(:last-child)::after { display: none; }
+    }
+  </style>
+</head>
+<body class="bg-empire-bg text-empire-text antialiased">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WPGPLJSL"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-empire-bg/80 backdrop-blur-md border-b border-empire-border">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center">
+          <img src="images/logos/Logotipo 04.webp" alt="Acelerador de Audiência" class="h-10 w-auto" width="160" height="40" fetchpriority="high">
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative pt-32 pb-16 overflow-hidden">
+    <div class="grid-pattern absolute inset-0 z-0"></div>
+    <div class="absolute inset-0 z-0" style="background: radial-gradient(ellipse 80% 50% at 50% 30%, rgba(201,169,98,0.06) 0%, transparent 70%);"></div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
+
+      <!-- Success badge -->
+      <div class="fade-in inline-flex items-center justify-center w-20 h-20 rounded-full bg-empire-gold/10 border border-empire-gold/30 mb-8 mx-auto pulse-check">
+        <svg class="w-10 h-10 text-empire-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7"/>
+        </svg>
+      </div>
+
+      <!-- Headline -->
+      <div class="fade-in fade-in-delay-1">
+        <p class="text-empire-gold text-sm tracking-widest uppercase mb-4">Aplicação Recebida</p>
+        <h1 class="font-display text-4xl md:text-6xl lg:text-7xl font-semibold tracking-tight mb-6">
+          <span class="text-empire-text">Agora, agende sua</span><br>
+          <span class="text-gold-gradient">Conversa Estratégica</span>
+        </h1>
+        <p class="text-xl text-empire-muted max-w-2xl mx-auto mb-4 font-light leading-relaxed">
+          Sua inscrição foi recebida. O próximo passo é escolher o melhor horário para conversar com um dos nossos consultores.
+        </p>
+        <p class="text-base text-empire-muted max-w-xl mx-auto mb-12 leading-relaxed">
+          A conversa é <span class="text-empire-text font-medium">gratuita e sem compromisso</span> — nosso objetivo é entender seu negócio e mostrar como o Acelerador pode funcionar para você.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Calendar Section -->
+  <section class="pb-24 relative z-10">
+    <div class="max-w-3xl mx-auto px-6 lg:px-8">
+
+      <!-- Section label -->
+      <div class="text-center mb-8 fade-in fade-in-delay-2">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-empire-gold/30 bg-empire-gold/5 mb-4">
+          <span class="w-2 h-2 bg-empire-gold rounded-full animate-pulse"></span>
+          <span class="text-empire-gold text-xs tracking-widest uppercase">Escolha seu horário</span>
+        </div>
+        <h2 class="font-display text-2xl md:text-3xl text-empire-text">
+          Agende com um consultor da <span class="text-gold-gradient">Empire</span>
+        </h2>
+      </div>
+
+      <!-- Calendar embed -->
+      <div class="calendar-wrapper fade-in fade-in-delay-3">
+        <iframe
+          src="https://l.empirebusiness.com.br/widget/booking/zNOWGH4AZSEn52oyMPr9"
+          style="width: 100%; border: none; overflow: hidden; min-height: 700px; display: block;"
+          scrolling="no"
+          id="zNOWGH4AZSEn52oyMPr9_1771885907757"
+          title="Agendamento com consultor Empire Business"
+        ></iframe>
+      </div>
+
+      <!-- Trust note -->
+      <p class="text-center text-empire-muted text-sm mt-6">
+        Após o agendamento, você receberá uma confirmação por e-mail com todos os detalhes.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- What happens next -->
+  <section class="py-24 md:py-32 bg-empire-surface relative">
+    <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-empire-gold/30 to-transparent"></div>
+    <div class="max-w-5xl mx-auto px-6 lg:px-8">
+
+      <div class="text-center mb-16">
+        <p class="text-empire-gold text-sm tracking-widest uppercase mb-4">Próximos Passos</p>
+        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl">
+          O que acontece <span class="text-gold-gradient">depois</span>
+        </h2>
+      </div>
+
+      <!-- Steps grid -->
+      <div class="grid md:grid-cols-4 gap-0 md:gap-6 relative">
+
+        <!-- Horizontal connector line (desktop only) -->
+        <div class="hidden md:block absolute top-10 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-transparent via-empire-gold/20 to-transparent z-0"></div>
+
+        <!-- Step 1 -->
+        <div class="step-connector relative z-10 flex flex-col items-center text-center p-6">
+          <div class="w-20 h-20 rounded-full bg-empire-card border border-empire-gold/30 flex items-center justify-center mb-6 flex-shrink-0">
+            <span class="font-display text-3xl text-gold-gradient font-semibold">01</span>
+          </div>
+          <h3 class="text-lg font-medium text-empire-text mb-3">Inscrição no Formulário</h3>
+          <p class="text-empire-muted text-sm leading-relaxed">
+            Ao preencher o formulário, nosso time entrará em contato com você em até <span class="text-empire-text">12h</span>.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-connector relative z-10 flex flex-col items-center text-center p-6">
+          <div class="w-20 h-20 rounded-full bg-empire-gold/10 border border-empire-gold/50 flex items-center justify-center mb-6 flex-shrink-0">
+            <span class="font-display text-3xl text-gold-gradient font-semibold">02</span>
+          </div>
+          <h3 class="text-lg font-medium text-empire-text mb-3">Ligação com um Consultor</h3>
+          <p class="text-empire-muted text-sm leading-relaxed">
+            Um consultor da Empire fará perguntas estratégicas para entender seu negócio.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-connector relative z-10 flex flex-col items-center text-center p-6">
+          <div class="w-20 h-20 rounded-full bg-empire-card border border-empire-gold/30 flex items-center justify-center mb-6 flex-shrink-0">
+            <span class="font-display text-3xl text-gold-gradient font-semibold">03</span>
+          </div>
+          <h3 class="text-lg font-medium text-empire-text mb-3">Conversa Estratégica</h3>
+          <p class="text-empire-muted text-sm leading-relaxed">
+            Receba um diagnóstico personalizado com direcionamentos sobre conteúdo e vendas.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="relative z-10 flex flex-col items-center text-center p-6">
+          <div class="w-20 h-20 rounded-full bg-empire-card border border-empire-gold/30 flex items-center justify-center mb-6 flex-shrink-0">
+            <span class="font-display text-3xl text-gold-gradient font-semibold">04</span>
+          </div>
+          <h3 class="text-lg font-medium text-empire-text mb-3">Aceleração do Crescimento</h3>
+          <p class="text-empire-muted text-sm leading-relaxed">
+            Execute as melhores estratégias para impulsionar o crescimento da sua empresa.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Bottom message -->
+      <div class="mt-16 text-center">
+        <div class="inline-block bg-empire-card px-8 py-6 border border-empire-gold/20 rounded-lg max-w-2xl">
+          <p class="text-empire-muted text-base mb-2">Conteúdo pode ser replicado.</p>
+          <p class="text-empire-gold font-semibold text-lg">Identidade, coerência e critério não.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 bg-empire-bg border-t border-empire-border">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-4">
+          <img src="images/logos/Logotipo 04.webp" alt="Acelerador de Audiência" class="h-8 w-auto" loading="lazy" width="128" height="32">
+        </div>
+        <p class="text-empire-muted text-sm">
+          © 2026 Acelerador de Audiência. Todos os direitos reservados.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Calendar embed script -->
+  <script src="https://l.empirebusiness.com.br/js/form_embed.js" type="text/javascript" defer></script>
+
+</body>
+</html>
