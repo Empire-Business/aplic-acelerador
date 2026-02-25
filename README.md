@@ -12,6 +12,7 @@ Landing page premium para o programa Acelerador de Audiência da Empire.
 
 ```
 ├── index.html          # Página principal
+├── form.html           # Página de formulário
 ├── vercel.json         # Configuração do Vercel
 ├── images/
 │   ├── hero-bg.png     # Background do hero
@@ -20,6 +21,24 @@ Landing page premium para o programa Acelerador de Audiência da Empire.
 │   └── marcas/         # Logos das marcas parceiras
 └── copy-acelerador-audiencia.md  # Copy original
 ```
+
+## Rotas Automáticas no Vercel
+
+O projeto usa uma regra de rewrite curinga no `vercel.json` que **automaticamente** mapeia qualquer arquivo `.html` para uma URL limpa (sem a extensão).
+
+### Como funciona:
+- Basta criar um novo arquivo `.html` na raiz do projeto
+- Ele será automaticamente acessível pela URL sem extensão
+
+### Exemplos:
+| Arquivo | URL de acesso |
+|---------|---------------|
+| `index.html` | `/` |
+| `form.html` | `/form` |
+| `nova-pagina.html` | `/nova-pagina` |
+| `obrigado.html` | `/obrigado` |
+
+**Importante:** Pastas como `images/`, `evento/` e `Marcas/` são excluídas da regra para não interferir com os arquivos de imagem.
 
 ## Tecnologias
 
