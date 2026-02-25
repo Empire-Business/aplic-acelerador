@@ -6,20 +6,8 @@
   "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/mapa-invisivel",
-      "destination": "/mapa-invisivel.html"
-    },
-    {
-      "source": "/obrigado-mql",
-      "destination": "/obrigado-mql.html"
-    },
-    {
-      "source": "/obrigado-auto",
-      "destination": "/obrigado-auto.html"
-    },
-    {
-      "source": "/obrigado",
-      "destination": "/obrigado.html"
+      "source": "/:path((?!images|evento|Marcas|api).*)",
+      "destination": "/:path.html"
     }
   ],
   "headers": [
