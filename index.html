@@ -59,6 +59,7 @@
     :root {
       --gold-gradient: linear-gradient(135deg, #c9a962 0%, #e4d4a5 50%, #c9a962 100%);
       --gold-text: #c9a962;
+      --green-gradient: linear-gradient(135deg, #16a34a 0%, #22c55e 50%, #16a34a 100%);
     }
 
     html {
@@ -90,16 +91,18 @@
                   linear-gradient(135deg, #c9a962, #e4d4a5, #c9a962) border-box;
     }
 
-    /* Premium button */
+    /* Premium button — green CTA for high contrast / conversion */
     .btn-premium {
-      background: var(--gold-gradient);
-      color: #0a0a0b;
-      font-weight: 600;
+      background: var(--green-gradient);
+      color: #ffffff;
+      font-weight: 700;
       padding: 1rem 2.5rem;
       border-radius: 2px;
       transition: all 0.3s ease;
       position: relative;
       overflow: hidden;
+      box-shadow: 0 4px 20px rgba(34, 197, 94, 0.35);
+      letter-spacing: 0.03em;
     }
 
     .btn-premium::before {
@@ -109,7 +112,7 @@
       left: -100%;
       width: 100%;
       height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
       transition: left 0.5s ease;
     }
 
@@ -119,7 +122,7 @@
 
     .btn-premium:hover {
       transform: translateY(-2px);
-      box-shadow: 0 10px 40px rgba(201, 169, 98, 0.3);
+      box-shadow: 0 10px 40px rgba(34, 197, 94, 0.5);
     }
 
     /* Secondary button */
@@ -488,54 +491,6 @@
       <svg class="w-6 h-6 text-empire-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
       </svg>
-    </div>
-  </section>
-
-  <!-- Social Proof - Brands -->
-  <section class="py-20 bg-empire-surface border-y border-empire-border">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <p class="text-empire-gold text-sm tracking-widest uppercase mb-4">Confiança Institucional</p>
-        <h2 class="font-display text-3xl md:text-4xl">Quem Confia no Acelerador de Audiência</h2>
-      </div>
-
-      <!-- Stats -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-        <div class="text-center p-8 border-gold-gradient">
-          <p class="text-4xl md:text-5xl font-display text-gold-gradient mb-2">+30M</p>
-          <p class="text-empire-muted text-sm tracking-wide uppercase">pessoas alcançadas</p>
-        </div>
-        <div class="text-center p-8 border-gold-gradient">
-          <p class="text-4xl md:text-5xl font-display text-gold-gradient mb-2">100+</p>
-          <p class="text-empire-muted text-sm tracking-wide uppercase">líderes transformados</p>
-        </div>
-        <div class="text-center p-8 border-gold-gradient">
-          <p class="text-4xl md:text-5xl font-display text-gold-gradient mb-2">3</p>
-          <p class="text-empire-muted text-sm tracking-wide uppercase">fases de transformação</p>
-        </div>
-      </div>
-
-      <!-- Brand logos -->
-      <div class="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-6 gap-6 md:gap-8 items-center justify-items-center py-4">
-        <img src="Marcas/1.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
-        <img src="Marcas/2.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
-        <img src="Marcas/3.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
-        <img src="Marcas/4.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
-        <img src="Marcas/5.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
-        <img src="Marcas/6.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
-        <img src="Marcas/7.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
-        <img src="Marcas/8.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
-        <img src="Marcas/9.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
-        <img src="Marcas/10.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
-        <img src="Marcas/12.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
-        <img src="Marcas/14.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
-        <img src="Marcas/15.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
-        <img src="Marcas/19.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
-        <img src="Marcas/20.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
-        <img src="Marcas/21.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
-        <img src="Marcas/22.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
-        <img src="Marcas/23.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
-      </div>
     </div>
   </section>
 
@@ -1300,6 +1255,54 @@
     </div>
   </section>
 
+  <!-- Social Proof - Brands -->
+  <section class="py-20 bg-empire-surface border-y border-empire-border">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <p class="text-empire-gold text-sm tracking-widest uppercase mb-4">Confiança Institucional</p>
+        <h2 class="font-display text-3xl md:text-4xl">Quem Confia no Acelerador de Audiência</h2>
+      </div>
+
+      <!-- Stats -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div class="text-center p-8 border-gold-gradient">
+          <p class="text-4xl md:text-5xl font-display text-gold-gradient mb-2">+30M</p>
+          <p class="text-empire-muted text-sm tracking-wide uppercase">pessoas alcançadas</p>
+        </div>
+        <div class="text-center p-8 border-gold-gradient">
+          <p class="text-4xl md:text-5xl font-display text-gold-gradient mb-2">100+</p>
+          <p class="text-empire-muted text-sm tracking-wide uppercase">líderes transformados</p>
+        </div>
+        <div class="text-center p-8 border-gold-gradient">
+          <p class="text-4xl md:text-5xl font-display text-gold-gradient mb-2">3</p>
+          <p class="text-empire-muted text-sm tracking-wide uppercase">fases de transformação</p>
+        </div>
+      </div>
+
+      <!-- Brand logos -->
+      <div class="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-6 gap-6 md:gap-8 items-center justify-items-center py-4">
+        <img src="Marcas/1.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
+        <img src="Marcas/2.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
+        <img src="Marcas/3.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
+        <img src="Marcas/4.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
+        <img src="Marcas/5.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
+        <img src="Marcas/6.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
+        <img src="Marcas/7.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
+        <img src="Marcas/8.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
+        <img src="Marcas/9.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
+        <img src="Marcas/10.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
+        <img src="Marcas/12.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
+        <img src="Marcas/14.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
+        <img src="Marcas/15.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
+        <img src="Marcas/19.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
+        <img src="Marcas/20.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
+        <img src="Marcas/21.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
+        <img src="Marcas/22.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
+        <img src="Marcas/23.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
+      </div>
+    </div>
+  </section>
+
   <!-- FAQ Section -->
   <section id="faq" class="py-24 md:py-32 bg-empire-surface">
     <div class="max-w-4xl mx-auto px-6 lg:px-8">
@@ -1385,22 +1388,59 @@
     <div class="hero-bg opacity-20"></div>
     <div class="grid-pattern absolute inset-0 opacity-30"></div>
 
-    <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center relative">
-      <div class="fade-in-up">
-        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl mb-8">
-          Pronto para Construir seu <span class="text-gold-gradient">Ativo de Autoridade</span>?
+    <!-- Ambient glow -->
+    <div class="absolute inset-0 pointer-events-none">
+      <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(201,169,98,0.07) 0%,transparent 70%);border-radius:50%;"></div>
+    </div>
+
+    <div class="max-w-2xl mx-auto px-6 lg:px-8 relative">
+      <div class="fade-in-up text-center mb-10">
+
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-empire-gold/40 bg-empire-gold/8 mb-6">
+          <span class="w-2 h-2 bg-empire-gold rounded-full animate-pulse"></span>
+          <span class="text-empire-gold text-xs tracking-widest uppercase font-medium">Aplicação Oficial — Ciclo 2026</span>
+        </div>
+
+        <h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-5">
+          Solicite sua <span class="text-gold-gradient">vaga agora</span>
         </h2>
 
-        <p class="text-empire-muted text-lg mb-12 max-w-2xl mx-auto">
-          Preencha o formulário abaixo para iniciar sua aplicação. Vagas limitadas para cada ciclo.
+        <p class="text-empire-muted text-lg max-w-lg mx-auto">
+          Vagas limitadas por ciclo. Preencha o formulário abaixo — leva menos de 2 minutos.
         </p>
+      </div>
 
-        <!-- Application Form -->
-        <div class="max-w-xl mx-auto">
+      <!-- Form card -->
+      <div class="relative rounded-2xl overflow-hidden" style="border:1px solid rgba(201,169,98,0.25);background:rgba(17,17,19,0.95);box-shadow:0 0 60px rgba(201,169,98,0.08),0 24px 64px rgba(0,0,0,0.5);">
+
+        <!-- Top accent bar -->
+        <div style="height:3px;background:linear-gradient(90deg,transparent,#c9a962,#e4d4a5,#c9a962,transparent);"></div>
+
+        <!-- Arrow indicator -->
+        <div class="text-center pt-8 pb-2 px-8">
+          <div class="inline-flex flex-col items-center gap-2">
+            <span class="text-empire-gold text-sm font-medium tracking-wide uppercase">Preencha o formulário abaixo</span>
+            <svg class="w-5 h-5 text-empire-gold animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Iframe -->
+        <div class="px-4 pb-6">
           <iframe src="https://l.empirebusiness.com.br/widget/survey/3Qz7uTLUJyMYA1D3rIJr" style="border:none;width:100%;" scrolling="no" id="3Qz7uTLUJyMYA1D3rIJr" title="survey"></iframe>
           <script src="https://l.empirebusiness.com.br/js/form_embed.js" defer></script>
         </div>
+
+        <!-- Bottom accent bar -->
+        <div style="height:1px;background:linear-gradient(90deg,transparent,rgba(201,169,98,0.3),transparent);"></div>
       </div>
+
+      <!-- Trust note -->
+      <p class="text-center text-empire-muted text-xs mt-6 tracking-wide">
+        🔒 Suas informações são confidenciais e nunca serão compartilhadas.
+      </p>
     </div>
   </section>
 
