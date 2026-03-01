@@ -1,0 +1,66 @@
+# Template: Não-Ficção Padrão
+# Uso: Livros de não-ficção, negócios, auto-ajuda, técnicos
+
+name: "Não-Ficção Padrão"
+description: "Estrutura para livros de não-ficção, negócios, auto-ajuda"
+
+# ========================================
+# DIMENSÕES DO LIVRO
+# ========================================
+trim_size: "6x9"  # Mais comum para não-ficção
+
+# ========================================
+# TIPOGRAFIA
+# ========================================
+font_size:
+  body: 11       # Corpo do texto
+  heading1: 18   # Título de capítulo
+  heading2: 16   # Seção
+  heading3: 14   # Subseção
+
+line_height: 1.5
+
+# ========================================
+# FRONT MATTER (páginas iniciais)
+# ========================================
+front_matter:
+  - half_title        # Página com título apenas
+  - title_page        # Título, subtítulo, autor, editora
+  - copyright         # Copyright, ISBN, edição
+  - dedication        # Dedicatória (opcional)
+  - contents          # Sumário/TOC
+  - foreword          # Prefácio (opcional)
+  - introduction      # Introdução (opcional)
+
+# ========================================
+# BODY MATTER (conteúdo principal)
+# ========================================
+body_matter:
+  chapter_start: "right"  # Capítulos começam em página par (direita)
+  include_part_dividers: true  # Divisores entre partes
+
+# ========================================
+# BACK MATTER (páginas finais)
+# ========================================
+back_matter:
+  - afterword          # Pósfacio (opcional)
+  - acknowledgments    # Agradecimentos
+  - about_author       # Sobre o autor
+  - references         # Referências bibliográficas (opcional)
+  - index              # Índice remissivo (opcional)
+
+# ========================================
+# ESTILOS ESPECÍFICOS
+# ========================================
+styles:
+  pull_quotes: true        # Citações destacadas
+  chapter_drop_cap: false  # Letra capitular (não comum em não-ficção)
+  running_heads: true      # Cabeçalhos com título/autor
+  text_alignment: "left"   # Alinhamento à esquerda
+
+# ========================================
+# CONFIGURAÇÕES DE LAYOUT
+# ========================================
+layout:
+  first_paragraph_indent: false  # Primeiro parágrafo sem recuo
+  scene_breaks: "***"            # Separador de cenas

@@ -1,0 +1,70 @@
+# Template: Antologia
+# Uso: Coletâneas de contos, poemas, ensaios
+
+name: "Antologia"
+description: "Estrutura para coletâneas e antologias"
+
+# ========================================
+# DIMENSÕES DO LIVRO
+# ========================================
+trim_size: "6x9"
+
+# ========================================
+# TIPOGRAFIA
+# ========================================
+font_size:
+  body: 11
+  heading1: 18   # Título da obra/conto
+  heading2: 14   # Nome do autor (se houver múltiplos autores)
+
+line_height: 1.5
+
+# ========================================
+# FRONT MATTER
+# ========================================
+front_matter:
+  - half_title
+  - title_page
+  - copyright
+  - dedication
+  - contents          # Importante para antologias
+  - introduction      # Introdução do organizador
+  - editor_note       # Nota do editor (opcional)
+
+# ========================================
+# BODY MATTER
+# ========================================
+body_matter:
+  chapter_start: "any"    # Contos podem começar em qualquer página
+  include_author_headers: true  # Mostrar nome do autor antes de cada conto
+
+# ========================================
+# BACK MATTER
+# ========================================
+back_matter:
+  - acknowledgments       # Agradecimentos
+  - about_authors         # Sobre os autores (todos)
+  - permissions          # Agradecimentos por reprodução
+  - about_editor         # Sobre o organizador
+
+# ========================================
+# ESTILOS ESPECÍFICOS
+# ========================================
+styles:
+  pull_quotes: false
+  chapter_drop_cap: false
+  running_heads: false      # Não usar running heads em antologias
+  text_alignment: "left"
+
+# ========================================
+# CONFIGURAÇÕES DE LAYOUT
+# ========================================
+layout:
+  first_paragraph_indent: true
+  scene_breaks: "***"
+  separator_between_works: true  # Separador visual entre obras
+
+# Formato do separador entre obras
+work_separator:
+  symbol: "***"
+  spacing: "3em"  # Espaço antes e depois do separador

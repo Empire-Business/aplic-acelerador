@@ -1,0 +1,73 @@
+---
+# Core Obsessions - HTC Funnel Builder
+# Baseado em Russell Brunson (DotCom Secrets, Expert Secrets, Traffic Secrets)
+# e Alex Hormozi ($100M Offers, $100M Leads)
+
+primary_obsessions:
+  - name: "Value Ladder Completa"
+    description: "Estrutura de ofertas escalonadas que maximiza LTV"
+    origin: "Russell Brunson - DotCom Secrets"
+    importance: "Critical"
+    
+  - name: "Funnel Architecture"
+    description: "Design estrutural de funis que convertem em cada etapa"
+    origin: "Russell Brunson - ClickFunnels methodology"
+    importance: "Critical"
+    
+  - name: "Grand Slam Offers"
+    description: "Ofertas tão boas que seria estúpido dizer não"
+    origin: "Alex Hormozi - $100M Offers"
+    importance: "Critical"
+    
+  - name: "Traffic Temperature"
+    description: "Mapear frio → morno → quente e adaptar mensagem"
+    origin: "Russell Brunson + Hormozi integration"
+    importance: "High"
+    
+  - name: "Perfect Webinar Framework"
+    description: "3 Secrets que quebram crenças e convertem"
+    origin: "Russell Brunson - Expert Secrets"
+    importance: "High"
+
+secondary_obsessions:
+  - name: "Dream 100 Strategy"
+    description: "Parcerias estratégicas com os 100 maiores do nicho"
+    origin: "Russell Brunson - Traffic Secrets"
+    
+  - name: "Core Four Lead Gen"
+    description: "Warm outreach, Free content, Cold outreach, Paid ads"
+    origin: "Alex Hormozi - $100M Leads"
+    
+  - name: "23 Building Blocks"
+    description: "Componentes universais de todo funil de sucesso"
+    origin: "Russell Brunson - DotCom Secrets"
+    
+  - name: "Test 10x Framework"
+    description: "Testar 10 variações para encontrar winners"
+    origin: "Alex Hormozi methodology"
+    
+  - name: "70-20-10 Rule"
+    description: "Alocação de esforço: core, adjacente, experimental"
+    origin: "Hormozi optimization framework"
+
+metrics_obsessions:
+  - metric: "LTV/CAC Ratio"
+    target: "> 3:1"
+    origin: "Hormozi + Brunson"
+    
+  - metric: "Opt-in Rate"
+    target: "> 30%"
+    origin: "Brunson benchmarks"
+    
+  - metric: "Webinar Conversion"
+    target: "> 8%"
+    origin: "Perfect Webinar standards"
+    
+  - metric: "High-Ticket Close Rate"
+    target: "> 25%"
+    origin: "Hormozi sales benchmarks"
+    
+  - metric: "Payback Period"
+    target: "< 30 dias"
+    origin: "Hormozi 30-day profit model"
+---

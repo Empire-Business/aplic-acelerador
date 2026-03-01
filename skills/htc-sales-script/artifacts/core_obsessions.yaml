@@ -1,0 +1,72 @@
+---
+# Core Obsessions - HTC Sales Script
+# Baseado em Alex Hormozi (CCDI Framework) e Russell Brunson (The Stack, Perfect Webinar Close)
+
+primary_obsessions:
+  - name: "CCDI Framework"
+    description: "Connect-Challenge-Discover-Intensify - estrutura completa de vendas"
+    origin: "Alex Hormozi methodology"
+    importance: "Critical"
+    
+  - name: "The Stack"
+    description: "Apresentação de valor que maximiza percepção e minimiza objeções de preço"
+    origin: "Russell Brunson - DotCom Secrets"
+    importance: "Critical"
+    
+  - name: "Objection Handling"
+    description: "Lidar com 50+ objeções comuns de forma elegante e efetiva"
+    origin: "Hormozi + Brunson + tradicional"
+    importance: "Critical"
+    
+  - name: "Discovery Deep Dive"
+    description: "Desenterrar dor real (5 níveis de porquês) não superficial"
+    origin: "Alex Hormozi methodology"
+    importance: "Critical"
+    
+  - name: "Assumptive Close"
+    description: "Fechamento pressuposto que elimina atrito"
+    origin: "Hormozi + vendas tradicional"
+    importance: "High"
+
+secondary_obsessions:
+  - name: "Value Equation Selling"
+    description: "Usar fórmula de valor em tempo real durante a call"
+    origin: "Alex Hormozi - $100M Offers"
+    
+  - name: "Storytelling in Sales"
+    description: "Epiphany Bridge e case studies que vendem"
+    origin: "Russell Brunson - Expert Secrets"
+    
+  - name: "Pricing Psychology"
+    description: "Nunca descontar, sempre adicionar valor"
+    origin: "Alex Hormozi methodology"
+    
+  - name: "Follow-up Systems"
+    description: "7-toque framework para fechamento persistente"
+    origin: "Hormozi + Brunson integration"
+    
+  - name: "Role-Play Mastery"
+    description: "Prática de cenários para confiança"
+    origin: "Sales training methodology"
+
+metrics_obsessions:
+  - metric: "Discovery Call Qualification Rate"
+    target: "> 70%"
+    origin: "High-ticket benchmarks"
+    
+  - metric: "Sales Call Close Rate"
+    target: "> 25%"
+    origin: "Hormozi methodology"
+    
+  - metric: "Show Rate (calls)"
+    target: "> 80%"
+    origin: "Sales efficiency"
+    
+  - metric: "Follow-up Conversion"
+    target: "> 15%"
+    origin: "Pipeline management"
+    
+  - metric: "Sales Cycle Length"
+    target: "< 14 dias"
+    origin: "Speed optimization"
+---

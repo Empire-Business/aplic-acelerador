@@ -1,0 +1,179 @@
+---
+# Mental Models - HTC Sales Script
+# Frameworks cognitivos para vendas high-ticket
+
+hormozi_models:
+  - name: "CCDI Framework"
+    formula: "Connect → Challenge → Discover → Intensify"
+    description: "Estrutura completa da conversa de vendas (45-60 min)"
+    origin: "Alex Hormozi methodology"
+    use_when: "Toda sales call high-ticket"
+    phases:
+      - "Connect (0-10 min): Rapport + Contexto"
+      - "Challenge (10-25 min): Quebrar crenças + Gap analysis"
+      - "Discover (25-45 min): Dor intensa + Desejo profundo"
+      - "Intensify (45-55 min): Urgência + Solução"
+      - "Close (55-60 min): The Stack + Assumir a venda"
+    
+  - name: "5 Levels of Why"
+    formula: "Perguntar 'por que?' 5 vezes para chegar na dor real"
+    description: "Técnica de descoberta de dor profunda"
+    origin: "Hormozi + método Toyota"
+    use_when: "Fase Discover - desenterrar dor real"
+    example: |
+      "O que está te frustrando?" → "Não vendo o suficiente"
+      "Por que isso é problema?" → "Não pago as contas"
+      "O que significa isso?" → "Estou preocupado o tempo todo"
+      "Como afeta sua vida?" → "Não durmo bem"
+      "O que isso diz sobre você?" → "Sinto que falho com minha família"
+    
+  - name: "Cost of Inaction Calculator"
+    formula: "(Meta - Atual) × Tempo = Custo de não agir"
+    description: "Quantificar o preço de ficar parado"
+    origin: "Alex Hormozi methodology"
+    use_when: "Intensify phase - criar urgência"
+    
+  - name: "Never Discount, Always Stack"
+    formula: "Quando pedem desconto → Adicionar valor"
+    description: "Manter preço premium enquanto aumenta valor"
+    origin: "Alex Hormozi methodology"
+    use_when: "Objection de preço"
+    
+  - name: "Assumptive Close"
+    formula: "Pressupor que vão comprar, perguntar como"
+    description: "Eliminar atrito da decisão"
+    origin: "Hormozi + vendas tradicional"
+    use_when: "Final da call"
+    example: "Qual cartão você quer usar?"
+    
+  - name: "Sharp Angle Close"
+    formula: "Se eu resolver [objeção], você entra?"
+    description: "Forçar decisão isolando objeção"
+    origin: "Vendas tradicional, refinado por Hormozi"
+    use_when: "Objeção específica clara"
+
+brunson_models:
+  - name: "The Stack"
+    formula: "Componente + Valor → Soma → Âncora → Preço real"
+    description: "Apresentação de oferta que maximiza valor percebido"
+    origin: "Russell Brunson - DotCom Secrets"
+    use_when: "Fase de close - apresentar preço"
+    steps:
+      - "Listar cada componente com valor"
+      - "Somar valores (âncora alta)"
+      - "Revelar preço real (contraste)"
+      - "Adicionar bônus"
+      - "CTA assumida"
+    
+  - name: "Epiphany Bridge"
+    formula: "9 etapas de storytelling transformacional"
+    description: "Contar história que leva à epifania da solução"
+    origin: "Russell Brunson - Expert Secrets"
+    use_when: "Buildar rapport + estabelecer autoridade"
+    steps:
+      - "Backstory"
+      - "Desire"
+      - "Wall"
+      - "Epiphany"
+      - "Plan"
+      - "Conflict"
+      - "Achievement"
+      - "Transformation"
+      - "New Opportunity"
+    
+  - name: "3 Secrets Close"
+    formula: "Secret #1 → Secret #2 → Secret #3 → Oferta"
+    description: "Quebrar 3 crenças limitantes antes de oferecer"
+    origin: "Russell Brunson - Expert Secrets"
+    use_when: "Webinars ou calls longas"
+    
+  - name: "Before/After Grid"
+    formula: "Comparar 6 dimensões de transformação"
+    description: "Visualizar mudança completa do cliente"
+    origin: "Russell Brunson methodology"
+    use_when: "Discover/Intensify - criar visão do futuro"
+    dimensions:
+      - "Finanças"
+      - "Tempo"
+      - "Stress"
+      - "Relacionamentos"
+      - "Auto-imagem"
+      - "Futuro"
+
+integration_models:
+  - name: "CCDI + The Stack"
+    formula: "Fases Hormozi + Close Brunson"
+    description: "Estrutura completa de vendas high-ticket"
+    integration: "Hormozi discovery + Brunson close"
+    use_when: "Toda sales call R$ 10k+"
+    
+  - name: "Discovery + Epiphany Bridge"
+    formula: "Perguntas Hormozi + Story Brunson"
+    description: "Buildar conexão profunda rapidamente"
+    integration: "Listen (Hormozi) + Tell story (Brunson)"
+    use_when: "Connect phase avançada"
+    
+  - name: "Value Equation + The Stack"
+    formula: "Justificativa lógica + Apresentação emocional"
+    description: "Cobrir todos os ângulos da decisão"
+    integration: "Hormozi math + Brunson framing"
+    use_when: "Apresentação de investimento"
+
+objection_models:
+  - name: "Feel-Felt-Found"
+    formula: "Eu entendo como você se sente... outros sentiram... e descobriram..."
+    description: "Validação + Social proof + Reframe"
+    origin: "Vendas tradicional"
+    use_when: "Objeções emocionais"
+    
+  - name: "Agree-Redirect-Question"
+    formula: "Concordar → Redirecionar → Pergunta de volta"
+    description: "Nunca ser defensivo"
+    origin: "Hormozi methodology"
+    use_when: "Toda objeção"
+    
+  - name: "Objection = Request for Information"
+    formula: "Tratar objeção como pedido de mais dados"
+    description: "Reframe mental da objeção"
+    origin: "Russell Brunson"
+    use_when: "Mindset durante objeções"
+
+closing_models:
+  - name: "Alternative Close"
+    formula: "Opção A ou Opção B (ambas são sim)"
+    description: "Dar escolha entre formas de comprar"
+    origin: "Vendas tradicional"
+    use_when: "Cliente quase decidido"
+    
+  - name: "Summary Close"
+    formula: "Recapitular tudo → Perguntar se quer"
+    description: "Reforçar valor antes de pedir"
+    origin: "Vendas tradicional"
+    use_when: "Após The Stack"
+    
+  - name: "Silence Close"
+    formula: "Perguntar decisão → Silêncio de 10-15s"
+    description: "Deixar espaço para processar"
+    origin: "Vendas tradicional"
+    use_when: "Momento final de tensão"
+    
+  - name: "Takeaway Close"
+    formula: "Sugerir que talvez não seja para ele"
+    description: "Forçar reconhecimento de desejo"
+    origin: "Vendas tradicional"
+    use_when: "Cliente hesitante demais"
+
+follow_up_models:
+  - name: "7-Touch Framework"
+    formula: "7 contatos estratégicos após call"
+    description: "Sequência completa de follow-up"
+    origin: "Vendas tradicional + Hormozi"
+    sequence:
+      - "Dia 1: Agradecimento + Recap"
+      - "Dia 2: Estudo de caso"
+      - "Dia 3: FAQ/Objeções"
+      - "Dia 5: Escassez"
+      - "Dia 7: Última chance"
+      - "Dia 14: Nurture"
+      - "Dia 30: Reengajamento"
+---

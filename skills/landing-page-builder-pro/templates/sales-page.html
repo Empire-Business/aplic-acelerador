@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[HEADLINE PRINCIPAL] | [NOME DO PRODUTO]</title>
+  <meta name="description" content="[META DESCRIPTION - 155 CARACTERES]">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Bebas Neue', 'sans-serif'],
+            body: ['DM Sans', 'sans-serif'],
+          },
+          colors: {
+            primary: '#2563eb',
+            accent: '#f59e0b',
+            dark: '#0a0a0a',
+            darker: '#050505',
+            light: '#ffffff',
+            muted: '#888888',
+            card: '#141414',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Animations */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4); }
+      50% { box-shadow: 0 0 30px 10px rgba(37, 99, 235, 0.2); }
+    }
+
+    .animate-fade-in-up {
+      animation: fadeInUp 0.8s ease-out forwards;
+      opacity: 0;
+    }
+
+    .cta-pulse:hover {
+      animation: pulse-glow 2s infinite;
+    }
+
+    /* Smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Selection */
+    ::selection {
+      background: rgba(37, 99, 235, 0.3);
+    }
+  </style>
+</head>
+<body class="bg-dark text-light font-body">
+
+  <!-- ============================================
+       HERO SECTION
+       ============================================ -->
+  <section class="min-h-screen flex items-center justify-center px-4 py-20 relative overflow-hidden">
+    <!-- Background gradient -->
+    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10"></div>
+
+    <div class="max-w-5xl mx-auto text-center relative z-10">
+
+      <!-- Pre-headline badge -->
+      <div class="animate-fade-in-up inline-block mb-6">
+        <span class="bg-accent text-dark text-sm font-bold px-4 py-1.5 rounded-full">
+          🔥 [URGÊNCIA/NOVIDADE]
+        </span>
+      </div>
+
+      <!-- Headline Principal -->
+      <h1 class="animate-fade-in-up font-display text-5xl md:text-6xl lg:text-7xl tracking-wide mb-6">
+        [HEADLINE PRINCIPAL]
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="animate-fade-in-up text-xl md:text-2xl text-muted max-w-3xl mx-auto mb-8">
+        [SUBHEADLINE - Mecanismo único + Para quem + Resultado esperado]
+      </p>
+
+      <!-- Hero Image/Video -->
+      <div class="animate-fade-in-up mb-10">
+        <div class="relative max-w-3xl mx-auto rounded-xl overflow-hidden border border-white/10 bg-card">
+          <!-- Placeholder - substitua por imagem/video real -->
+          <div class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+            <span class="text-muted">[IMAGEM DO PRODUTO / VÍDEO DE VENDAS]</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Principal -->
+      <div class="animate-fade-in-up">
+        <a href="#oferta" class="cta-pulse inline-block bg-primary hover:bg-primary/90 text-white font-bold text-lg py-5 px-12 rounded-lg transition-all duration-300">
+          QUERO [RESULTADO] AGORA →
+        </a>
+        <p class="mt-4 text-sm text-muted">
+          ✅ [GARANTIA] • 💳 [PARCELAMENTO] • 🔒 [SEGURANÇA]
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================
+       SOCIAL PROOF (LOGOS)
+       ============================================ -->
+  <section class="py-12 px-4 border-y border-white/5 bg-darker">
+    <div class="max-w-5xl mx-auto text-center">
+      <p class="text-muted text-sm mb-6">METODOLOGIA USADA POR:</p>
+      <div class="flex flex-wrap justify-center items-center gap-8 opacity-60">
+        <!-- Logos placeholder -->
+        <div class="w-24 h-8 bg-white/10 rounded"></div>
+        <div class="w-24 h-8 bg-white/10 rounded"></div>
+        <div class="w-24 h-8 bg-white/10 rounded"></div>
+        <div class="w-24 h-8 bg-white/10 rounded"></div>
+        <div class="w-24 h-8 bg-white/10 rounded"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PROBLEMA / DOR
+       ============================================ -->
+  <section class="py-20 px-4">
+    <div class="max-w-4xl mx-auto">
+
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+        Se você está [SITUAÇÃO], provavelmente já sentiu isso:
+      </h2>
+
+      <div class="space-y-6 text-lg">
+        <div class="flex gap-4 items-start">
+          <span class="text-red-500 text-2xl">✗</span>
+          <p>[DOR 1 - Descreva uma frustração específica que seu público sente]</p>
+        </div>
+        <div class="flex gap-4 items-start">
+          <span class="text-red-500 text-2xl">✗</span>
+          <p>[DOR 2 - Outra frustração comum que seu público enfrenta]</p>
+        </div>
+        <div class="flex gap-4 items-start">
+          <span class="text-red-500 text-2xl">✗</span>
+          <p>[DOR 3 - A dor mais profunda que ninguém fala]</p>
+        </div>
+      </div>
+
+      <div class="mt-12 p-6 bg-card rounded-xl border border-white/10">
+        <p class="text-center text-xl">
+          <strong>A verdade?</strong> O problema não é você.
+          <br>O problema é [CRENÇA LIMITANTE COMUM DO MERCADO].
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================
+       A VIRADA / MECANISMO ÚNICO
+       ============================================ -->
+  <section class="py-20 px-4 bg-card">
+    <div class="max-w-4xl mx-auto text-center">
+
+      <h2 class="font-display text-4xl md:text-5xl mb-8">
+        AQUI ESTÁ O QUE NINGUÉM TE CONTA:
+      </h2>
+
+      <p class="text-xl text-muted max-w-3xl mx-auto mb-12">
+        [EXPLICAÇÃO DO MECANISMO ÚNICO - Por que os métodos tradicionais falham e qual é a verdadeira causa do problema]
+      </p>
+
+      <!-- Os 3 Pilares -->
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <div class="p-6 bg-dark rounded-xl border border-white/10">
+          <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary text-2xl mb-4 mx-auto">
+            1
+          </div>
+          <h3 class="font-bold text-lg mb-2">[PILAR 1]</h3>
+          <p class="text-muted text-sm">[Descrição do primeiro pilar do seu método]</p>
+        </div>
+
+        <div class="p-6 bg-dark rounded-xl border border-white/10">
+          <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary text-2xl mb-4 mx-auto">
+            2
+          </div>
+          <h3 class="font-bold text-lg mb-2">[PILAR 2]</h3>
+          <p class="text-muted text-sm">[Descrição do segundo pilar do seu método]</p>
+        </div>
+
+        <div class="p-6 bg-dark rounded-xl border border-white/10">
+          <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary text-2xl mb-4 mx-auto">
+            3
+          </div>
+          <h3 class="font-bold text-lg mb-2">[PILAR 3]</h3>
+          <p class="text-muted text-sm">[Descrição do terceiro pilar do seu método]</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================
+       O QUE VOCÊ RECEBE (PRODUTO)
+       ============================================ -->
+  <section class="py-20 px-4">
+    <div class="max-w-5xl mx-auto">
+
+      <h2 class="font-display text-4xl md:text-5xl text-center mb-4">
+        O QUE VEM DENTRO DO [NOME DO PRODUTO]
+      </h2>
+      <p class="text-muted text-center mb-12 max-w-2xl mx-auto">
+        [Descrição geral do produto e formato de entrega]
+      </p>
+
+      <!-- Módulos -->
+      <div class="space-y-4">
+
+        <details class="group bg-card rounded-xl border border-white/10 overflow-hidden">
+          <summary class="flex items-center justify-between p-6 cursor-pointer">
+            <div class="flex items-center gap-4">
+              <span class="bg-primary/20 text-primary font-bold w-10 h-10 rounded-lg flex items-center justify-center">1</span>
+              <div>
+                <h3 class="font-semibold">[NOME DO MÓDULO 1]</h3>
+                <p class="text-sm text-muted">[Resultado que esse módulo entrega]</p>
+              </div>
+            </div>
+            <svg class="w-5 h-5 text-muted group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </summary>
+          <div class="px-6 pb-6 text-muted">
+            <ul class="space-y-2">
+              <li>• [Aula/conteúdo 1]</li>
+              <li>• [Aula/conteúdo 2]</li>
+              <li>• [Aula/conteúdo 3]</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="group bg-card rounded-xl border border-white/10 overflow-hidden">
+          <summary class="flex items-center justify-between p-6 cursor-pointer">
+            <div class="flex items-center gap-4">
+              <span class="bg-primary/20 text-primary font-bold w-10 h-10 rounded-lg flex items-center justify-center">2</span>
+              <div>
+                <h3 class="font-semibold">[NOME DO MÓDULO 2]</h3>
+                <p class="text-sm text-muted">[Resultado que esse módulo entrega]</p>
+              </div>
+            </div>
+            <svg class="w-5 h-5 text-muted group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </summary>
+          <div class="px-6 pb-6 text-muted">
+            <ul class="space-y-2">
+              <li>• [Aula/conteúdo 1]</li>
+              <li>• [Aula/conteúdo 2]</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="group bg-card rounded-xl border border-white/10 overflow-hidden">
+          <summary class="flex items-center justify-between p-6 cursor-pointer">
+            <div class="flex items-center gap-4">
+              <span class="bg-primary/20 text-primary font-bold w-10 h-10 rounded-lg flex items-center justify-center">3</span>
+              <div>
+                <h3 class="font-semibold">[NOME DO MÓDULO 3]</h3>
+                <p class="text-sm text-muted">[Resultado que esse módulo entrega]</p>
+              </div>
+            </div>
+            <svg class="w-5 h-5 text-muted group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </summary>
+          <div class="px-6 pb-6 text-muted">
+            <ul class="space-y-2">
+              <li>• [Aula/conteúdo 1]</li>
+              <li>• [Aula/conteúdo 2]</li>
+            </ul>
+          </div>
+        </details>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================
+       BÔNUS
+       ============================================ -->
+  <section class="py-20 px-4 bg-gradient-to-b from-card to-dark">
+    <div class="max-w-4xl mx-auto text-center">
+
+      <span class="inline-block bg-accent text-dark text-sm font-bold px-4 py-1.5 rounded-full mb-6">
+        BÔNUS EXCLUSIVOS
+      </span>
+
+      <h2 class="font-display text-4xl md:text-5xl mb-12">
+        E TEM MAIS: OS BÔNUS
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-6">
+
+        <div class="bg-card p-6 rounded-xl border border-accent/20 text-left">
+          <div class="flex items-center justify-between mb-4">
+            <span class="bg-accent/20 text-accent text-sm font-semibold px-3 py-1 rounded">BÔNUS #1</span>
+            <span class="text-muted line-through text-sm">R$ XXX</span>
+          </div>
+          <h3 class="font-bold text-lg mb-2">[NOME DO BÔNUS 1]</h3>
+          <p class="text-muted text-sm">[Descrição do bônus e como ele acelera o resultado]</p>
+        </div>
+
+        <div class="bg-card p-6 rounded-xl border border-accent/20 text-left">
+          <div class="flex items-center justify-between mb-4">
+            <span class="bg-accent/20 text-accent text-sm font-semibold px-3 py-1 rounded">BÔNUS #2</span>
+            <span class="text-muted line-through text-sm">R$ XXX</span>
+          </div>
+          <h3 class="font-bold text-lg mb-2">[NOME DO BÔNUS 2]</h3>
+          <p class="text-muted text-sm">[Descrição do bônus e como ele acelera o resultado]</p>
+        </div>
+
+        <div class="bg-card p-6 rounded-xl border border-accent/20 text-left">
+          <div class="flex items-center justify-between mb-4">
+            <span class="bg-accent/20 text-accent text-sm font-semibold px-3 py-1 rounded">BÔNUS #3</span>
+            <span class="text-muted line-through text-sm">R$ XXX</span>
+          </div>
+          <h3 class="font-bold text-lg mb-2">[NOME DO BÔNUS 3]</h3>
+          <p class="text-muted text-sm">[Descrição do bônus e como ele acelera o resultado]</p>
+        </div>
+
+        <div class="bg-card p-6 rounded-xl border border-accent/20 text-left">
+          <div class="flex items-center justify-between mb-4">
+            <span class="bg-accent/20 text-accent text-sm font-semibold px-3 py-1 rounded">BÔNUS #4</span>
+            <span class="text-muted line-through text-sm">R$ XXX</span>
+          </div>
+          <h3 class="font-bold text-lg mb-2">[NOME DO BÔNUS 4]</h3>
+          <p class="text-muted text-sm">[Descrição do bônus e como ele acelera o resultado]</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================
+       DEPOIMENTOS
+       ============================================ -->
+  <section class="py-20 px-4">
+    <div class="max-w-5xl mx-auto">
+
+      <h2 class="font-display text-4xl md:text-5xl text-center mb-12">
+        QUEM JÁ CONSEGUIU [RESULTADO]
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <!-- Depoimento 1 -->
+        <div class="bg-card p-6 rounded-xl border border-white/10">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-primary/20 rounded-full"></div>
+            <div>
+              <p class="font-semibold">[NOME]</p>
+              <p class="text-sm text-muted">[OCUPAÇÃO/LOCALIZAÇÃO]</p>
+            </div>
+          </div>
+          <p class="text-muted text-sm italic">
+            "[DEPOIMENTO - Foque em resultado específico e transformação]"
+          </p>
+          <div class="mt-4 text-accent">★★★★★</div>
+        </div>
+
+        <!-- Depoimento 2 -->
+        <div class="bg-card p-6 rounded-xl border border-white/10">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-primary/20 rounded-full"></div>
+            <div>
+              <p class="font-semibold">[NOME]</p>
+              <p class="text-sm text-muted">[OCUPAÇÃO/LOCALIZAÇÃO]</p>
+            </div>
+          </div>
+          <p class="text-muted text-sm italic">
+            "[DEPOIMENTO - Foque em resultado específico e transformação]"
+          </p>
+          <div class="mt-4 text-accent">★★★★★</div>
+        </div>
+
+        <!-- Depoimento 3 -->
+        <div class="bg-card p-6 rounded-xl border border-white/10">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-primary/20 rounded-full"></div>
+            <div>
+              <p class="font-semibold">[NOME]</p>
+              <p class="text-sm text-muted">[OCUPAÇÃO/LOCALIZAÇÃO]</p>
+            </div>
+          </div>
+          <p class="text-muted text-sm italic">
+            "[DEPOIMENTO - Foque em resultado específico e transformação]"
+          </p>
+          <div class="mt-4 text-accent">★★★★★</div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================
+       OFERTA (STACK + PREÇO)
+       ============================================ -->
+  <section id="oferta" class="py-20 px-4 bg-card">
+    <div class="max-w-3xl mx-auto text-center">
+
+      <h2 class="font-display text-4xl md:text-5xl mb-8">
+        INVISTA NO [NOME DO PRODUTO] HOJE
+      </h2>
+
+      <!-- Stack de Valor -->
+      <div class="bg-dark rounded-xl border border-white/10 p-8 mb-8 text-left">
+        <ul class="space-y-4">
+          <li class="flex justify-between items-center pb-4 border-b border-white/10">
+            <span>[PRODUTO PRINCIPAL]</span>
+            <span class="text-muted">R$ XXXX</span>
+          </li>
+          <li class="flex justify-between items-center pb-4 border-b border-white/10">
+            <span>[BÔNUS 1]</span>
+            <span class="text-muted">R$ XXX</span>
+          </li>
+          <li class="flex justify-between items-center pb-4 border-b border-white/10">
+            <span>[BÔNUS 2]</span>
+            <span class="text-muted">R$ XXX</span>
+          </li>
+          <li class="flex justify-between items-center pb-4 border-b border-white/10">
+            <span>[BÔNUS 3]</span>
+            <span class="text-muted">R$ XXX</span>
+          </li>
+        </ul>
+
+        <div class="mt-6 pt-6 border-t border-white/10 flex justify-between items-center">
+          <span class="text-xl font-bold">VALOR TOTAL:</span>
+          <span class="text-xl text-muted line-through">R$ XXXX</span>
+        </div>
+      </div>
+
+      <!-- Preço -->
+      <div class="mb-8">
+        <p class="text-muted mb-2">De R$ [ORIGINAL] por apenas:</p>
+        <div class="text-5xl md:text-6xl font-bold text-primary mb-2">
+          R$ [PREÇO]
+        </div>
+        <p class="text-muted">ou 12x de R$ [PARCELA]</p>
+      </div>
+
+      <!-- CTA -->
+      <a href="#" class="cta-pulse inline-block bg-primary hover:bg-primary/90 text-white font-bold text-xl py-6 px-16 rounded-lg transition-all duration-300 w-full md:w-auto">
+        QUERO GARANTIR MINHA VAGA →
+      </a>
+
+      <!-- Trust badges -->
+      <div class="mt-8 flex flex-wrap justify-center gap-6 text-sm text-muted">
+        <div class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          Acesso Imediato
+        </div>
+        <div class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          Garantia de [X] Dias
+        </div>
+        <div class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          Pagamento Seguro
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================
+       GARANTIA
+       ============================================ -->
+  <section class="py-20 px-4">
+    <div class="max-w-2xl mx-auto text-center">
+
+      <div class="bg-gradient-to-br from-primary/20 to-accent/20 p-8 rounded-2xl border border-white/10">
+        <div class="text-6xl mb-4">🛡️</div>
+        <h3 class="font-display text-3xl mb-4">GARANTIA INCONDICIONAL</h3>
+        <p class="text-muted mb-6">
+          Se em [X] dias você sentir que o [PRODUTO] não é para você,
+          basta enviar um email e devolvemos 100% do seu investimento.
+          Sem perguntas. Sem burocracia.
+        </p>
+        <p class="font-semibold">O risco é TODO nosso.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================
+       FAQ
+       ============================================ -->
+  <section class="py-20 px-4 bg-card">
+    <div class="max-w-3xl mx-auto">
+
+      <h2 class="font-display text-4xl md:text-5xl text-center mb-12">
+        PERGUNTAS FREQUENTES
+      </h2>
+
+      <div class="space-y-4">
+
+        <details class="group bg-dark rounded-xl border border-white/10 overflow-hidden">
+          <summary class="flex items-center justify-between p-6 cursor-pointer font-semibold">
+            [PERGUNTA 1]
+            <svg class="w-5 h-5 text-muted group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </summary>
+          <div class="px-6 pb-6 text-muted">
+            [RESPOSTA 1]
+          </div>
+        </details>
+
+        <details class="group bg-dark rounded-xl border border-white/10 overflow-hidden">
+          <summary class="flex items-center justify-between p-6 cursor-pointer font-semibold">
+            [PERGUNTA 2]
+            <svg class="w-5 h-5 text-muted group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </summary>
+          <div class="px-6 pb-6 text-muted">
+            [RESPOSTA 2]
+          </div>
+        </details>
+
+        <details class="group bg-dark rounded-xl border border-white/10 overflow-hidden">
+          <summary class="flex items-center justify-between p-6 cursor-pointer font-semibold">
+            [PERGUNTA 3]
+            <svg class="w-5 h-5 text-muted group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </summary>
+          <div class="px-6 pb-6 text-muted">
+            [RESPOSTA 3]
+          </div>
+        </details>
+
+        <details class="group bg-dark rounded-xl border border-white/10 overflow-hidden">
+          <summary class="flex items-center justify-between p-6 cursor-pointer font-semibold">
+            [PERGUNTA 4]
+            <svg class="w-5 h-5 text-muted group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </summary>
+          <div class="px-6 pb-6 text-muted">
+            [RESPOSTA 4]
+          </div>
+        </details>
+
+        <details class="group bg-dark rounded-xl border border-white/10 overflow-hidden">
+          <summary class="flex items-center justify-between p-6 cursor-pointer font-semibold">
+            [PERGUNTA 5]
+            <svg class="w-5 h-5 text-muted group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </summary>
+          <div class="px-6 pb-6 text-muted">
+            [RESPOSTA 5]
+          </div>
+        </details>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================
+       CTA FINAL
+       ============================================ -->
+  <section class="py-20 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+
+      <h2 class="font-display text-4xl md:text-5xl mb-6">
+        A DECISÃO É SUA
+      </h2>
+
+      <p class="text-xl text-muted mb-8 max-w-2xl mx-auto">
+        Daqui a [TEMPO], você pode estar [RESULTADO NEGATIVO SE NÃO AGIR]...
+        <br><br>
+        <strong>OU</strong>
+        <br><br>
+        Pode estar [RESULTADO POSITIVO - O SONHO].
+        <br><br>
+        A diferença está na decisão que você tomar agora.
+      </p>
+
+      <a href="#" class="cta-pulse inline-block bg-primary hover:bg-primary/90 text-white font-bold text-xl py-6 px-16 rounded-lg transition-all duration-300">
+        SIM! QUERO [RESULTADO] →
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="py-8 px-4 border-t border-white/5 text-center text-sm text-muted">
+    <p>&copy; 2024 [SUA MARCA]. Todos os direitos reservados.</p>
+    <p class="mt-4">
+      Este produto não garante a obtenção de resultados.
+      Qualquer referência ao desempenho de uma estratégia não deve ser interpretada como garantia de resultados.
+    </p>
+    <p class="mt-4">
+      <a href="#" class="hover:text-white transition-colors">Política de Privacidade</a>
+      <span class="mx-2">•</span>
+      <a href="#" class="hover:text-white transition-colors">Termos de Uso</a>
+      <span class="mx-2">•</span>
+      <a href="#" class="hover:text-white transition-colors">Contato</a>
+    </p>
+  </footer>
+
+</body>
+</html>

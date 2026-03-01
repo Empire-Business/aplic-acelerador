@@ -1,0 +1,63 @@
+# Template: Romance/Ficção
+# Uso: Romances, contos, ficção literária
+
+name: "Romance"
+description: "Estrutura para romances e ficção literária"
+
+# ========================================
+# DIMENSÕES DO LIVRO
+# ========================================
+trim_size: "5.25x8"  # Tamanho padrão para romances
+
+# ========================================
+# TIPOGRAFIA
+# ========================================
+font_size:
+  body: 11       # Corpo do texto
+  heading1: 16   # Título de capítulo (menor que não-ficção)
+  heading2: 14
+
+line_height: 1.5
+
+# ========================================
+# FRONT MATTER (páginas iniciais)
+# ========================================
+front_matter:
+  - half_title        # Página com título apenas
+  - title_page        # Título, autor
+  - copyright         # Copyright
+  - dedication        # Dedicatória (opcional)
+  - contents          # Sumário (opcional em romances)
+
+# ========================================
+# BODY MATTER (conteúdo principal)
+# ========================================
+body_matter:
+  chapter_start: "right"  # Capítulos começam em página direita
+  scene_breaks: true      # Breaks de cena
+
+# ========================================
+# BACK MATTER (páginas finais)
+# ========================================
+back_matter:
+  - acknowledgments    # Agradecimentos
+  - about_author       # Sobre o autor
+  - reading_group_guide  # Guia de discussão (opcional)
+  - also_by_author     # Outros livros do autor
+
+# ========================================
+# ESTILOS ESPECÍFICOS
+# ========================================
+styles:
+  pull_quotes: false       # Citações destacadas (raro em ficção)
+  chapter_drop_cap: true   # Letra capitular no início dos capítulos
+  running_heads: true      # Cabeçalhos
+  text_alignment: "justify"  # Justificado (comum em ficção)
+
+# ========================================
+# CONFIGURAÇÕES DE LAYOUT
+# ========================================
+layout:
+  first_paragraph_indent: true   # Primeiro parágrafo com recuo
+  scene_breaks: "***"            # Separador de cenas
+  chapter_spacing: 2             # Espaçamento antes de título

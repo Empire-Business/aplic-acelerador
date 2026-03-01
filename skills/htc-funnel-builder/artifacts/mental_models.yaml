@@ -1,0 +1,144 @@
+---
+# Mental Models - HTC Funnel Builder
+# Frameworks cognitivos para construção de funis high-ticket
+
+brunson_models:
+  - name: "Value Ladder"
+    formula: "Bait → Tripwire → Core Offer → High-Ticket → Continuity"
+    description: "Estrutura de ofertas escalonadas que aumenta LTV"
+    book: "DotCom Secrets"
+    use_when: "Planejando estrutura de produtos completa"
+    
+  - name: "23 Building Blocks"
+    formula: "20+ componentes universais de funis"
+    description: "Biblioteca de elementos que todo funil usa"
+    book: "DotCom Secrets"
+    use_when: "Construindo ou auditando funis"
+    
+  - name: "Perfect Webinar (3 Secrets)"
+    formula: "Secret #1 (crença errada) → Secret #2 (motivo real) → Secret #3 (atalho)"
+    description: "Framework de apresentação que converte"
+    book: "Expert Secrets"
+    use_when: "Criando webinars ou VSLs"
+    
+  - name: "Epiphany Bridge"
+    formula: "9 etapas de storytelling transformacional"
+    description: "Contar história que leva à epifania da solução"
+    book: "Expert Secrets"
+    use_when: "Criando narrativa de vendas"
+    
+  - name: "Dream 100"
+    formula: "Identificar + Relacionar + Parceria com top 100 do nicho"
+    description: "Estratégia de tráfego via parcerias"
+    book: "Traffic Secrets"
+    use_when: "Buscando tráfego qualificado"
+    
+  - name: "Traffic Temperature"
+    formula: "Frio → Morno → Quente"
+    description: "Adaptar mensagem ao nível de relacionamento"
+    book: "Traffic Secrets"
+    use_when: "Escrevendo copy para diferentes audiências"
+    
+  - name: "Attractive Character"
+    formula: "Guide | Guru | Relatable | Reporter"
+    description: "4 arquétipos de persona de marca"
+    book: "Expert Secrets"
+    use_when: "Desenvolvendo posicionamento pessoal"
+    
+  - name: "The Stack"
+    formula: "Componente + Valor → Soma → Âncora → Preço real"
+    description: "Apresentação de oferta que maximiza percepção de valor"
+    book: "DotCom Secrets"
+    use_when: "Apresentando preço de ofertas"
+
+hormozi_models:
+  - name: "Value Equation"
+    formula: "(Dream Outcome × Perceived Likelihood) ÷ (Time Delay × Effort & Sacrifice)"
+    description: "Maximizar valor aumentando numerador e diminuindo denominador"
+    book: "$100M Offers"
+    use_when: "Projetando ou otimizando ofertas"
+    
+  - name: "GMMM Framework"
+    formula: "Get Money → More Money → Max Money"
+    description: "3 camadas de monetização do cliente"
+    book: "$100M Offers"
+    use_when: "Planejando backend monetization"
+    
+  - name: "Grand Slam Offer"
+    formula: "Produto Principal + Pilha de Bônus + Garantia de Risco Zero"
+    description: "Oferta incomparável e irresistível"
+    book: "$100M Offers"
+    use_when: "Criando ofertas high-ticket"
+    
+  - name: "Trim & Stack"
+    formula: "Remover não-essenciais + Adicionar bônus que eliminam objeções"
+    description: "Otimização de ofertas por adição/subtração"
+    book: "$100M Offers"
+    use_when: "Refinando oferta existente"
+    
+  - name: "Core Four Lead Gen"
+    formula: "Warm Outreach + Free Content + Cold Outreach + Paid Ads"
+    description: "4 fontes de geração de leads"
+    book: "$100M Leads"
+    use_when: "Planejando estratégia de tráfego"
+    
+  - name: "Test 10x Framework"
+    formula: "Criar 10 variações → Testar → Manter winner → Repetir"
+    description: "Sistema de otimização por volume de testes"
+    book: "Hormozi methodology"
+    use_when: "Otimizando elementos de funil"
+    
+  - name: "70-20-10 Rule"
+    formula: "70% Core (mantém) + 20% Adjacente (testa) + 10% Experimental (explora)"
+    description: "Alocação de esforço de otimização"
+    book: "Hormozi methodology"
+    use_when: "Priorizando testes e inovações"
+    
+  - name: "30-Day Profit Model"
+    formula: "CAC + Delivery deve ser recuperado em 30 dias"
+    description: "Regra de saúde financeira de campanhas"
+    book: "Hormozi methodology"
+    use_when: "Avaliando viabilidade de ofertas"
+
+integration_models:
+  - name: "High-Ticket Application Funnel"
+    formula: "Tráfego Qualificado → VSL/Conteúdo → Aplicação → Discovery → Sales Call → Close"
+    description: "Funil completo para ofertas R$10k-100k+"
+    integration: "Brunson structure + Hormozi qualification"
+    use_when: "Vendendo consultoria, mentoria, serviços premium"
+    
+  - name: "Perfect Webinar Close"
+    formula: "3 Secrets (Brunson) + The Stack (Brunson) + Value Equation (Hormozi)"
+    description: "Combinação máxima para apresentações de vendas"
+    integration: "Webinar framework + Oferta irresistível"
+    use_when: "Webinars, VSLs, calls de vendas"
+    
+  - name: "Traffic Architecture"
+    formula: "Owned (70%) + Controlled (20%) + Rented (10%)"
+    description: "Distribuição ideal de fontes de tráfego"
+    integration: "Brunson traffic types + Hormozi volume"
+    use_when: "Planejando mix de tráfego"
+
+funnel_math_models:
+  - name: "LTV/CAC Health Check"
+    formula: "LTV ÷ CAC"
+    benchmarks:
+      danger: "< 2:1"
+      healthy: "3:1 to 5:1"
+      scale_ready: "> 5:1"
+    
+  - name: "Funnel Velocity"
+    formula: "Leads × Conversion Rate × AOV ÷ Time"
+    description: "Velocidade de geração de receita pelo funil"
+    
+  - name: "Break-Even ROAS"
+    formula: "1 ÷ (Margem de Lucro)"
+    example: "Se margem é 30%, BE ROAS = 3.33"
+    
+  - name: "Opt-in Rate Benchmark"
+    formula: "Opt-ins ÷ Visitors"
+    benchmarks:
+      poor: "< 15%"
+      good: "20-30%"
+      great: "> 35%"
+---

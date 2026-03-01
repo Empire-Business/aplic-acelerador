@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="generator" content="KDP Book Formatter">
+  <title>{{TITLE}}</title>
+  <style>
+    /* CSS BASE - conteúdo de resources/kdp-base.css */
+    {{CSS_CONTENT}}
+  </style>
+  <style>
+    /* CONFIGURAÇÕES ESPECÍFICAS DO LIVRO */
+    @page {
+      size: {{WIDTH}}in {{HEIGHT}}in;
+      margin-top: {{MARGIN_TOP}}in;
+      margin-bottom: {{MARGIN_BOTTOM}}in;
+      margin-left: {{MARGIN_INSIDE}}in;
+      margin-right: {{MARGIN_OUTSIDE}}in;
+    }
+
+    @page :left {
+      margin-left: {{MARGIN_OUTSIDE}}in;
+      margin-right: {{MARGIN_INSIDE}}in;
+    }
+
+    @page :right {
+      margin-left: {{MARGIN_INSIDE}}in;
+      margin-right: {{MARGIN_OUTSIDE}}in;
+    }
+
+    /* Font size customizado */
+    body {
+      font-size: {{FONT_SIZE}}pt;
+      line-height: {{LINE_HEIGHT}};
+    }
+
+    /* Capítulos começam em página direita */
+    .chapter {
+      page-break-before: {{CHAPTER_BREAK}};
+    }
+  </style>
+</head>
+<body>
+  <!-- ========================================
+       FRONT MATTER
+       ======================================== -->
+
+  <!-- Half Title Page -->
+  <div class="half-title page">
+    <h1 class="half-title-text">{{TITLE}}</h1>
+  </div>
+
+  <!-- Title Page -->
+  <div class="title-page page">
+    <h1 class="title">{{TITLE}}</h1>
+    {{SUBTITLE_HTML}}
+    <p class="author">{{AUTHOR}}</p>
+    {{PUBLISHER_HTML}}
+  </div>
+
+  <!-- Copyright Page -->
+  <div class="copyright-page page">
+    <p>{{TITLE}}<br>
+    Copyright © {{YEAR}} {{AUTHOR}}</p>
+    <p>All rights reserved.</p>
+    {{ISBN_HTML}}
+    {{PUBLISHER_HTML}}
+  </div>
+
+  <!-- Dedicatória (se existir) -->
+  {{DEDICATION_HTML}}
+
+  <!-- Table of Contents -->
+  <div class="toc-page page">
+    <h1>Conteúdo</h1>
+    <div class="toc-entries">
+      {{TOC_ENTRIES}}
+    </div>
+  </div>
+
+  <!-- ========================================
+       BODY MATTER
+       ======================================== -->
+  {{CHAPTERS_HTML}}
+
+  <!-- ========================================
+       BACK MATTER
+       ======================================== -->
+  {{BACK_MATTER_HTML}}
+</body>
+</html>
