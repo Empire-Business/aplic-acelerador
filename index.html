@@ -327,24 +327,80 @@
           </div>
         </div>
         
-        <div class="bg-empire-bg/30 p-6 rounded-lg">
-          <h4 class="text-empire-gold font-medium mb-4">Exemplo do Sistema:</h4>
-          <div class="grid md:grid-cols-2 gap-6 text-sm">
-            <div>
-              <p class="text-empire-text/60 mb-2">CONTEÚDO FONTE (você grava):</p>
-              <p class="text-empire-text">Podcast de 1 hora — "Como escolher o procedimento certo"</p>
+        <div class="bg-gradient-to-br from-empire-gold/5 via-empire-card/50 to-empire-card border border-empire-gold/20 p-8 rounded-lg relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-empire-gold/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+          <div class="relative">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-10 h-10 rounded-lg bg-empire-gold/10 flex items-center justify-center">
+                <svg class="w-5 h-5 text-empire-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              </div>
+              <h4 class="text-empire-gold font-medium">Exemplo do Sistema</h4>
             </div>
-            <div>
-              <p class="text-empire-text/60 mb-2">SEU TIME PRODUZ (usando o Mapa):</p>
-              <ul class="text-empire-text/80 space-y-1">
-                <li>→ 3 cortes para Reels/TikTok/Shorts</li>
-                <li>→ 2 carrosséis para Instagram</li>
-                <li>→ 1 thread para LinkedIn</li>
-                <li>→ 1 newsletter completa</li>
-              </ul>
+            
+            <div class="grid md:grid-cols-12 gap-4 items-center">
+              <!-- Input -->
+              <div class="md:col-span-5 bg-empire-surface/50 border border-empire-border rounded-lg p-5">
+                <div class="flex items-center gap-2 mb-3">
+                  <svg class="w-4 h-4 text-empire-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/></svg>
+                  <span class="text-empire-text/60 text-xs uppercase tracking-wider">Entrada</span>
+                </div>
+                <p class="text-empire-text font-medium">Podcast de 1 hora</p>
+                <p class="text-empire-text/70 text-sm">"Como escolher o procedimento certo"</p>
+                <div class="mt-3 flex items-center gap-2 text-empire-text/50 text-xs">
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  <span>60 minutos gravados</span>
+                </div>
+              </div>
+              
+              <!-- Arrow -->
+              <div class="md:col-span-2 flex justify-center">
+                <div class="flex flex-col items-center gap-1">
+                  <div class="w-10 h-10 rounded-full bg-empire-gold/10 border border-empire-gold/30 flex items-center justify-center">
+                    <svg class="w-5 h-5 text-empire-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                  </div>
+                  <span class="text-empire-gold text-xs">Mapa de Produção</span>
+                </div>
+              </div>
+              
+              <!-- Output -->
+              <div class="md:col-span-5 bg-gradient-to-br from-empire-gold/10 to-empire-gold/5 border border-empire-gold/30 rounded-lg p-5">
+                <div class="flex items-center gap-2 mb-3">
+                  <svg class="w-4 h-4 text-empire-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                  <span class="text-empire-gold text-xs uppercase tracking-wider">Saída</span>
+                </div>
+                <div class="space-y-2">
+                  <div class="flex items-center gap-2 text-empire-text text-sm">
+                    <span class="w-5 h-5 rounded bg-empire-gold/20 text-empire-gold text-xs flex items-center justify-center font-medium">3</span>
+                    <span>Cortes para Reels/TikTok/Shorts</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-empire-text text-sm">
+                    <span class="w-5 h-5 rounded bg-empire-gold/20 text-empire-gold text-xs flex items-center justify-center font-medium">2</span>
+                    <span>Carrosséis para Instagram</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-empire-text text-sm">
+                    <span class="w-5 h-5 rounded bg-empire-gold/20 text-empire-gold text-xs flex items-center justify-center font-medium">1</span>
+                    <span>Thread para LinkedIn</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-empire-text text-sm">
+                    <span class="w-5 h-5 rounded bg-empire-gold/20 text-empire-gold text-xs flex items-center justify-center font-medium">1</span>
+                    <span>Newsletter completa</span>
+                  </div>
+                </div>
+                <div class="mt-3 pt-3 border-t border-empire-gold/20 flex items-center justify-between text-xs">
+                  <span class="text-empire-text/50">Total: 7+ peças</span>
+                  <span class="text-empire-gold flex items-center gap-1">
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                    7x mais conteúdo
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-6 pt-5 border-t border-empire-border flex items-start gap-3">
+              <svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <p class="text-empire-text/60 text-sm">Você não recebe conteúdo pronto. Você recebe o <strong class="text-empire-text">sistema</strong> para produzir conteúdo em escala com seu time.</p>
             </div>
           </div>
-          <p class="text-empire-text/60 text-sm mt-4 italic">Você não recebe conteúdo pronto. Você recebe o sistema para produzir conteúdo em escala com seu time.</p>
         </div>
       </div>
     </div>
@@ -376,21 +432,21 @@
             <div class="grid md:grid-cols-2 gap-6 mb-6">
               <div class="bg-empire-card/50 p-5 border border-empire-border rounded-lg">
                 <h4 class="text-empire-gold font-medium mb-3 text-sm uppercase tracking-wide">O que analisamos:</h4>
-                <ul class="text-empire-text/70 text-sm space-y-2">
-                  <li>→ Esse conteúdo comunica o que sua marca quer comunicar?</li>
-                  <li>→ Reforça ou contradiz sua identidade?</li>
-                  <li>→ Pode causar problemas ou mal-entendidos?</li>
-                  <li>→ Pode ser melhorado ou reaproveitado?</li>
+                <ul class="text-empire-text/70 text-sm space-y-3">
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg><span>Esse conteúdo comunica o que sua marca quer comunicar?</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg><span>Reforça ou contradiz sua identidade?</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg><span>Pode causar problemas ou mal-entendidos?</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg><span>Pode ser melhorado ou reaproveitado?</span></li>
                 </ul>
               </div>
               <div class="bg-empire-card/50 p-5 border border-empire-border rounded-lg">
                 <h4 class="text-empire-gold font-medium mb-3 text-sm uppercase tracking-wide">Você recebe:</h4>
-                <p class="text-empire-text font-medium mb-2">Mapa de Riscos e Oportunidades</p>
-                <ul class="text-empire-text/70 text-sm space-y-1">
-                  <li>→ O que está certo (mantenha)</li>
-                  <li>→ O que está errado (elimine)</li>
-                  <li>→ O que pode melhorar (ajuste)</li>
-                  <li>→ O que deve evitar (riscos)</li>
+                <p class="text-empire-text font-medium mb-3">Mapa de Riscos e Oportunidades</p>
+                <ul class="text-empire-text/70 text-sm space-y-2">
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>O que está certo (mantenha)</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg><span>O que está errado (elimine)</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg><span>O que pode melhorar (ajuste)</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg><span>O que deve evitar (riscos)</span></li>
                 </ul>
               </div>
             </div>
@@ -418,12 +474,12 @@
               </div>
               <div class="bg-empire-card/50 p-5 border border-empire-border rounded-lg">
                 <h4 class="text-empire-gold font-medium mb-3 text-sm uppercase tracking-wide">Por que isso importa:</h4>
-                <ul class="text-empire-text/70 text-sm space-y-2">
-                  <li>→ Todo conteúdo segue o mesmo padrão — você não precisa corrigir erro de comunicação</li>
-                  <li>→ Impede que conteúdos fora do tom sejam publicados</li>
-                  <li>→ Sua audiência te identifica em qualquer canal, sem ver seu nome</li>
-                  <li>→ Novos colaboradores entendem rapidamente como a marca fala</li>
-                  <li>→ Você para de ser "uma marca diferente em cada canal"</li>
+                <ul class="text-empire-text/70 text-sm space-y-3">
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Todo conteúdo segue o mesmo padrão — você não precisa corrigir erro de comunicação</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Impede que conteúdos fora do tom sejam publicados</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Sua audiência te identifica em qualquer canal, sem ver seu nome</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Novos colaboradores entendem rapidamente como a marca fala</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Você para de ser "uma marca diferente em cada canal"</span></li>
                 </ul>
               </div>
             </div>
@@ -496,20 +552,20 @@
             <div class="grid md:grid-cols-2 gap-6 mb-6">
               <div class="bg-empire-card/50 p-5 border border-empire-border rounded-lg">
                 <h4 class="text-empire-gold font-medium mb-3 text-sm uppercase tracking-wide">O que fazemos:</h4>
-                <ul class="text-empire-text/70 text-sm space-y-2">
-                  <li>→ Produzimos os <strong class="text-empire-text">primeiros roteiros</strong> de conteúdo baseados no seu Brand Book</li>
-                  <li>→ Montamos os <strong class="text-empire-text">primeiros Mapas de Produção</strong> preenchidos com seus conteúdos</li>
-                  <li>→ Preenchemos os <strong class="text-empire-text">primeiros Mapas de Distribuição</strong> com grade completa</li>
-                  <li>→ Você <strong class="text-empire-text">observa e acompanha</strong> — não precisa fazer nada nessa fase</li>
+                <ul class="text-empire-text/70 text-sm space-y-3">
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span>Produzimos os <strong class="text-empire-text">primeiros roteiros</strong> de conteúdo baseados no seu Brand Book</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span>Montamos os <strong class="text-empire-text">primeiros Mapas de Produção</strong> preenchidos com seus conteúdos</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span>Preenchemos os <strong class="text-empire-text">primeiros Mapas de Distribuição</strong> com grade completa</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span>Você <strong class="text-empire-text">observa e acompanha</strong> — não precisa fazer nada nessa fase</span></li>
                 </ul>
               </div>
               <div class="bg-empire-card/50 p-5 border border-empire-border rounded-lg">
                 <h4 class="text-empire-gold font-medium mb-3 text-sm uppercase tracking-wide">Por que isso funciona:</h4>
-                <ul class="text-empire-text/70 text-sm space-y-2">
-                  <li>→ Você aprende por <strong class="text-empire-text">observação</strong> — muito mais eficaz que só estudar</li>
-                  <li>→ Tem <strong class="text-empire-text">exemplos concretos</strong> do seu próprio negócio para seguir</li>
-                  <li>→ Vê o sistema gerando <strong class="text-empire-text">leads e demanda</strong> antes de assumir</li>
-                  <li>→ Reduz a insegurança de "e agora, como eu faço?"</li>
+                <ul class="text-empire-text/70 text-sm space-y-3">
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Você aprende por <strong class="text-empire-text">observação</strong> — muito mais eficaz que só estudar</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Tem <strong class="text-empire-text">exemplos concretos</strong> do seu próprio negócio para seguir</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Vê o sistema gerando <strong class="text-empire-text">leads e demanda</strong> antes de assumir</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Reduz a insegurança de "e agora, como eu faço?"</span></li>
                 </ul>
               </div>
             </div>
@@ -528,20 +584,20 @@
             <div class="grid md:grid-cols-2 gap-6 mb-6">
               <div class="bg-empire-card/50 p-5 border border-empire-border rounded-lg">
                 <h4 class="text-empire-gold font-medium mb-3 text-sm uppercase tracking-wide">Como funciona:</h4>
-                <ul class="text-empire-text/70 text-sm space-y-2">
-                  <li>→ <strong class="text-empire-text">Revisão completa:</strong> Revisamos tudo que foi entregue em cada fase</li>
-                  <li>→ <strong class="text-empire-text">Orientação de continuidade:</strong> Como usar o Mapa de Produção para novos conteúdos</li>
-                  <li>→ <strong class="text-empire-text">Gestão da distribuição:</strong> Como preencher o Mapa de Distribuição semanalmente</li>
-                  <li>→ <strong class="text-empire-text">Leitura de dados:</strong> Como ajustar a estratégia com base no desempenho</li>
+                <ul class="text-empire-text/70 text-sm space-y-3">
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg><span><strong class="text-empire-text">Revisão completa:</strong> Revisamos tudo que foi entregue em cada fase</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg><span><strong class="text-empire-text">Orientação de continuidade:</strong> Como usar o Mapa de Produção para novos conteúdos</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg><span><strong class="text-empire-text">Gestão da distribuição:</strong> Como preencher o Mapa de Distribuição semanalmente</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg><span><strong class="text-empire-text">Leitura de dados:</strong> Como ajustar a estratégia com base no desempenho</span></li>
                 </ul>
               </div>
               <div class="bg-empire-card/50 p-5 border border-empire-border rounded-lg">
                 <h4 class="text-empire-gold font-medium mb-3 text-sm uppercase tracking-wide">O que você ganha:</h4>
-                <ul class="text-empire-text/70 text-sm space-y-2">
-                  <li>→ <strong class="text-empire-text">Autonomia total:</strong> Opera o sistema sozinho, sem depender de nós</li>
-                  <li>→ <strong class="text-empire-text">Sistema instalado:</strong> Todas as ferramentas prontas e funcionando</li>
-                  <li>→ <strong class="text-empire-text">Independência:</strong> O processo continua gerando resultado mesmo depois do programa</li>
-                  <li>→ <strong class="text-empire-text">Escalabilidade:</strong> Pode contratar mais pessoas e onboardar com o Brand Book</li>
+                <ul class="text-empire-text/70 text-sm space-y-3">
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span><strong class="text-empire-text">Autonomia total:</strong> Opera o sistema sozinho, sem depender de nós</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span><strong class="text-empire-text">Sistema instalado:</strong> Todas as ferramentas prontas e funcionando</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span><strong class="text-empire-text">Independência:</strong> O processo continua gerando resultado mesmo depois do programa</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span><strong class="text-empire-text">Escalabilidade:</strong> Pode contratar mais pessoas e onboardar com o Brand Book</span></li>
                 </ul>
               </div>
             </div>
@@ -559,56 +615,68 @@
     <div class="max-w-6xl mx-auto px-6 lg:px-8 relative">
       <div class="text-center mb-16 fade-in-up">
         <p class="text-empire-gold text-sm tracking-widest uppercase mb-4">A Transformação</p>
-        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl mb-6">De <span class="text-red-400">Invisível</span> a <span class="text-gold-gradient">Autoridade</span></h2>
+        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl mb-6">De <span class="text-empire-gold">Invisível</span> a <span class="text-gold-gradient">Autoridade</span></h2>
         <p class="text-empire-text/80 text-lg max-w-3xl mx-auto">O que muda na prática quando você implementa o sistema:</p>
       </div>
 
       <div class="grid lg:grid-cols-2 gap-8 mb-16">
-        <div class="bg-gradient-to-br from-red-500/5 to-transparent border border-red-500/20 p-8 rounded-lg fade-in-up">
+        <div class="bg-gradient-to-br from-red-900/10 to-transparent border border-red-900/30 p-8 rounded-lg fade-in-up">
           <div class="flex items-center gap-3 mb-6">
-            <div class="w-10 h-10 rounded-full bg-red-500/10 flex items-center justify-center">
+            <div class="w-10 h-10 rounded-full bg-red-900/20 flex items-center justify-center">
               <svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
             </div>
             <h3 class="text-xl font-medium text-red-400">ANTES — O Inferno</h3>
           </div>
           <div class="space-y-4">
             <div class="flex items-start gap-3">
-              <span class="text-red-400 mt-1">✕</span>
+              <div class="w-5 h-5 rounded-full bg-red-900/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              </div>
               <div>
                 <p class="text-empire-text font-medium">Acorda angustiado</p>
                 <p class="text-empire-text/60 text-sm">Dorme e acorda pensando nos concorrentes que estão te ultrapassando no Instagram</p>
               </div>
             </div>
             <div class="flex items-start gap-3">
-              <span class="text-red-400 mt-1">✕</span>
+              <div class="w-5 h-5 rounded-full bg-red-900/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              </div>
               <div>
                 <p class="text-empire-text font-medium">Vergonha do Instagram</p>
                 <p class="text-empire-text/60 text-sm">Evita passar seu arroba em eventos. Seu perfil não reflete seu sucesso real</p>
               </div>
             </div>
             <div class="flex items-start gap-3">
-              <span class="text-red-400 mt-1">✕</span>
+              <div class="w-5 h-5 rounded-full bg-red-900/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              </div>
               <div>
                 <p class="text-empire-text font-medium">Time que não entrega</p>
                 <p class="text-empire-text/60 text-sm">Paga caro em folha para profissionais que produzem conteúdo genérico</p>
               </div>
             </div>
             <div class="flex items-start gap-3">
-              <span class="text-red-400 mt-1">✕</span>
+              <div class="w-5 h-5 rounded-full bg-red-900/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              </div>
               <div>
                 <p class="text-empire-text font-medium">Caos operacional</p>
                 <p class="text-empire-text/60 text-sm">Gasta mais tempo organizando o time do que fazendo o que realmente importa</p>
               </div>
             </div>
             <div class="flex items-start gap-3">
-              <span class="text-red-400 mt-1">✕</span>
+              <div class="w-5 h-5 rounded-full bg-red-900/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              </div>
               <div>
                 <p class="text-empire-text font-medium">Custo de aquisição disparando</p>
                 <p class="text-empire-text/60 text-sm">Cada lead custa mais que o anterior. Conversão caindo</p>
               </div>
             </div>
             <div class="flex items-start gap-3">
-              <span class="text-red-400 mt-1">✕</span>
+              <div class="w-5 h-5 rounded-full bg-red-900/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              </div>
               <div>
                 <p class="text-empire-text font-medium">Invisível no mercado</p>
                 <p class="text-empire-text/60 text-sm">Não é chamado para podcasts, palestras ou oportunidades de visibilidade</p>
@@ -617,51 +685,63 @@
           </div>
         </div>
 
-        <div class="bg-gradient-to-br from-emerald-500/5 to-transparent border border-emerald-500/20 p-8 rounded-lg fade-in-up">
+        <div class="bg-gradient-to-br from-emerald-900/10 to-transparent border border-emerald-900/30 p-8 rounded-lg fade-in-up">
           <div class="flex items-center gap-3 mb-6">
-            <div class="w-10 h-10 rounded-full bg-emerald-500/10 flex items-center justify-center">
+            <div class="w-10 h-10 rounded-full bg-emerald-900/20 flex items-center justify-center">
               <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             </div>
             <h3 class="text-xl font-medium text-emerald-400">DEPOIS — O Paraíso</h3>
           </div>
           <div class="space-y-4">
             <div class="flex items-start gap-3">
-              <span class="text-emerald-400 mt-1">✓</span>
+              <div class="w-5 h-5 rounded-full bg-emerald-900/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
               <div>
                 <p class="text-empire-text font-medium">Acorda tranquilo</p>
                 <p class="text-empire-text/60 text-sm">Sabe que o sistema está rodando. Sua marca trabalhou enquanto você dormia</p>
               </div>
             </div>
             <div class="flex items-start gap-3">
-              <span class="text-emerald-400 mt-1">✓</span>
+              <div class="w-5 h-5 rounded-full bg-emerald-900/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
               <div>
                 <p class="text-empire-text font-medium">Orgulho do Instagram</p>
                 <p class="text-empire-text/60 text-sm">Compartilha seu perfil com satisfação. Finalmente reflete quem você é</p>
               </div>
             </div>
             <div class="flex items-start gap-3">
-              <span class="text-emerald-400 mt-1">✓</span>
+              <div class="w-5 h-5 rounded-full bg-emerald-900/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
               <div>
                 <p class="text-empire-text font-medium">Time autônomo</p>
                 <p class="text-empire-text/60 text-sm">Sua equipe sabe exatamente o que fazer com o Brand Book e os Mapas</p>
               </div>
             </div>
             <div class="flex items-start gap-3">
-              <span class="text-emerald-400 mt-1">✓</span>
+              <div class="w-5 h-5 rounded-full bg-emerald-900/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
               <div>
                 <p class="text-empire-text font-medium">Sistema documentado</p>
                 <p class="text-empire-text/60 text-sm">Você grava 1 hora por semana. O sistema transforma em 50+ peças</p>
               </div>
             </div>
             <div class="flex items-start gap-3">
-              <span class="text-emerald-400 mt-1">✓</span>
+              <div class="w-5 h-5 rounded-full bg-emerald-900/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
               <div>
                 <p class="text-empire-text font-medium">CAC reduzido, conversão alta</p>
                 <p class="text-empire-text/60 text-sm">Leads chegam mais conscientes. Menos objeções, mais vendas</p>
               </div>
             </div>
             <div class="flex items-start gap-3">
-              <span class="text-emerald-400 mt-1">✓</span>
+              <div class="w-5 h-5 rounded-full bg-emerald-900/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
               <div>
                 <p class="text-empire-text font-medium">Autoridade reconhecida</p>
                 <p class="text-empire-text/60 text-sm">Chamado para podcasts, palestras, parcerias. As pessoas querem ouvi-lo</p>
@@ -671,23 +751,89 @@
         </div>
       </div>
 
-      <div class="bg-empire-card border border-empire-border rounded-lg overflow-hidden fade-in-up">
-        <div class="p-6 border-b border-empire-border">
-          <h3 class="text-xl font-medium text-empire-text text-center">O Que Muda na Prática</h3>
-        </div>
-        <div class="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-empire-border">
-          <div class="p-6">
-            <p class="text-empire-text/60 text-sm mb-3">ANTES:</p>
-            <p class="text-empire-text">Você gera 1 conteúdo por vez. Cada post exige sentar, criar, gravar, editar. Consome horas do seu dia.</p>
+      <div class="grid md:grid-cols-2 gap-6 fade-in-up">
+        <!-- ANTES -->
+        <div class="bg-gradient-to-br from-empire-gold/5 to-transparent border border-empire-gold/20 p-8 rounded-lg">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-full bg-empire-gold/10 flex items-center justify-center">
+              <svg class="w-5 h-5 text-empire-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3 class="text-xl font-medium text-empire-gold">ANTES</h3>
           </div>
-          <div class="p-6">
-            <p class="text-empire-text/60 text-sm mb-3">DEPOIS:</p>
-            <p class="text-empire-text">Você grava 1 hora de conteúdo longo. Seu time usa o sistema para extrair múltiplas peças. Você foca no negócio.</p>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-red-900/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              </div>
+              <div>
+                <p class="text-empire-text font-medium">1 conteúdo por vez</p>
+                <p class="text-empire-text/60 text-sm">Cada post exige sentar, criar, gravar, editar. Consome horas do seu dia.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-red-900/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              </div>
+              <div>
+                <p class="text-empire-text font-medium">Você faz tudo</p>
+                <p class="text-empire-text/60 text-sm">Não existe sistema. Cada peça é criada manualmente do zero.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-red-900/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              </div>
+              <div>
+                <p class="text-empire-text font-medium">Resultado imprevisível</p>
+                <p class="text-empire-text/60 text-sm">Não sabe o que vai sair, quando vai sair, ou se vai funcionar.</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="p-4 bg-empire-bg/30 border-t border-empire-border text-center">
-          <p class="text-empire-text/60 text-sm">Resultados de leads e conversão dependem do seu produto, tráfego e oferta. O que entregamos é o sistema de escala de conteúdo.</p>
+
+        <!-- DEPOIS -->
+        <div class="bg-gradient-to-br from-empire-gold/5 to-transparent border border-empire-gold/20 p-8 rounded-lg">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-full bg-empire-gold/10 flex items-center justify-center">
+              <svg class="w-5 h-5 text-empire-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3 class="text-xl font-medium text-empire-gold">DEPOIS</h3>
+          </div>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-emerald-900/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <p class="text-empire-text font-medium">1 hora vira 50+ peças</p>
+                <p class="text-empire-text/60 text-sm">Seu time usa o sistema para extrair múltiplos formatos automaticamente.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-emerald-900/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <p class="text-empire-text font-medium">Sistema delegável</p>
+                <p class="text-empire-text/60 text-sm">Você foca no negócio. Seu time executa seguindo o Brand Book e Mapas.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-emerald-900/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <p class="text-empire-text font-medium">Produção previsível</p>
+                <p class="text-empire-text/60 text-sm">Sabe exatamente quanto conteúdo vai sair, quando, e com qual tom.</p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <div class="mt-8 p-6 bg-empire-card/50 border border-empire-border rounded-lg flex items-start gap-4">
+        <svg class="w-5 h-5 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <p class="text-empire-text/60 text-sm">Resultados de leads e conversão dependem do seu produto, tráfego e oferta. O que entregamos é o <strong class="text-empire-text">sistema de escala de conteúdo</strong>.</p>
       </div>
     </div>
   </section>
