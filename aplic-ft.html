@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WPGPLJSL');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/webp" href="images/logos/Logotipo 04.webp">
+  <title>Acelerador de Audiência — Transforme 1 hora em 50+ peças de conteúdo</title>
+  <meta name="description" content="Programa de implementação que constrói seu sistema de distribuição de conteúdo — sem gravar reels, sem virar personagem, sem depender de time que não entrega.">
+  <meta name="theme-color" content="#0a0a0b">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://l.empirebusiness.com.br">
+  <link rel="preconnect" href="https://l.empirebusiness.com.br" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            empire: {
+              bg: '#0a0a0b',
+              surface: '#111113',
+              card: '#18181b',
+              border: '#27272a',
+              text: '#fafafa',
+              gold: '#c9a962',
+              goldLight: '#e4d4a5',
+              goldDark: '#9a7b3c',
+            }
+          },
+          fontFamily: {
+            display: ['Cormorant Garamond', 'serif'],
+            body: ['DM Sans', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    :root { --gold-gradient: linear-gradient(135deg, #c9a962 0%, #e4d4a5 50%, #c9a962 100%); --gold-text: #c9a962; --green-gradient: linear-gradient(135deg, #16a34a 0%, #22c55e 50%, #16a34a 100%); }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background-color: #0a0a0b; color: #fafafa; }
+    .font-display { font-family: 'Cormorant Garamond', serif; }
+    .text-gold-gradient { background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .border-gold-gradient { border: 1px solid transparent; background: linear-gradient(#18181b, #18181b) padding-box, linear-gradient(135deg, #c9a962, #e4d4a5, #c9a962) border-box; }
+    .btn-premium { background: var(--green-gradient); color: #ffffff; font-weight: 700; padding: 1rem 2.5rem; border-radius: 2px; transition: all 0.3s ease; position: relative; overflow: hidden; box-shadow: 0 4px 20px rgba(34, 197, 94, 0.35); letter-spacing: 0.03em; }
+    .btn-premium::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent); transition: left 0.5s ease; }
+    .btn-premium:hover::before { left: 100%; }
+    .btn-premium:hover { transform: translateY(-2px); box-shadow: 0 10px 40px rgba(34, 197, 94, 0.5); }
+    .btn-secondary { background: transparent; border: 1px solid #c9a962; color: #c9a962; padding: 1rem 2.5rem; border-radius: 2px; transition: all 0.3s ease; }
+    .btn-secondary:hover { background: rgba(201, 169, 98, 0.1); transform: translateY(-2px); }
+    .hero-bg { position: absolute; inset: 0; background-image: url('images/hero-bg.webp'); background-size: cover; background-position: center; opacity: 0.4; z-index: 0; }
+    .hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,10,11,0.3) 0%, rgba(10,10,11,0.9) 70%, rgba(10,10,11,1) 100%); }
+    .grid-pattern { background-image: linear-gradient(rgba(201, 169, 98, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(201, 169, 98, 0.03) 1px, transparent 1px); background-size: 60px 60px; }
+    .fade-in-up { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .fade-in-up.visible { opacity: 1; transform: translateY(0); }
+    .stagger-children > * { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .stagger-children.visible > *:nth-child(1) { transition-delay: 0.1s; }
+    .stagger-children.visible > *:nth-child(2) { transition-delay: 0.2s; }
+    .stagger-children.visible > *:nth-child(3) { transition-delay: 0.3s; }
+    .stagger-children.visible > *:nth-child(4) { transition-delay: 0.4s; }
+    .stagger-children.visible > *:nth-child(5) { transition-delay: 0.5s; }
+    .stagger-children.visible > *:nth-child(6) { transition-delay: 0.6s; }
+    .stagger-children.visible > * { opacity: 1; transform: translateY(0); }
+    .card-hover { transition: all 0.4s ease; }
+    .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
+    .logo-item { filter: grayscale(50%) brightness(0.9); opacity: 0.85; transition: all 0.3s ease; }
+    .logo-item:hover { filter: grayscale(0%) brightness(1); opacity: 1; transform: scale(1.05); }
+    .client-card { transition: all 0.4s ease; }
+    .client-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+    .faq-item { border-bottom: 1px solid rgba(201, 169, 98, 0.1); }
+    .faq-question { cursor: pointer; transition: color 0.3s ease; }
+    .faq-question:hover { color: #c9a962; }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; }
+    .faq-item.active .faq-answer { max-height: 500px; padding-bottom: 1.5rem; }
+    .faq-item.active .faq-icon { transform: rotate(45deg); }
+    .faq-icon { transition: transform 0.3s ease; }
+    .mobile-menu { transform: translateX(100%); transition: transform 0.3s ease; }
+    .mobile-menu.active { transform: translateX(0); }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #0a0a0b; }
+    ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #c9a962; }
+  </style>
+</head>
+<body class="bg-empire-bg text-empire-text antialiased">
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WPGPLJSL" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-empire-bg/80 backdrop-blur-md border-b border-empire-border">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="#" class="flex items-center"><img src="images/logos/Logotipo 04.webp" alt="Acelerador de Audiência" class="h-10 w-auto" width="160" height="40" fetchpriority="high"></a>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#problema" class="text-empire-text/70 hover:text-empire-gold transition-colors text-sm tracking-wide">O Diagnóstico</a>
+          <a href="#solucao" class="text-empire-text/70 hover:text-empire-gold transition-colors text-sm tracking-wide">A Solução</a>
+          <a href="#metodologia" class="text-empire-text/70 hover:text-empire-gold transition-colors text-sm tracking-wide">Metodologia</a>
+          <a href="#clientes" class="text-empire-text/70 hover:text-empire-gold transition-colors text-sm tracking-wide">Resultados</a>
+          <a href="#faq" class="text-empire-text/70 hover:text-empire-gold transition-colors text-sm tracking-wide">FAQ</a>
+        </div>
+        <div class="hidden md:block"><a href="#cta" class="btn-secondary text-sm tracking-wide">APLICAR AGORA</a></div>
+        <button id="mobile-menu-btn" class="md:hidden text-empire-text p-2"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu fixed inset-y-0 right-0 w-72 bg-empire-surface border-l border-empire-border md:hidden">
+      <div class="p-6">
+        <button id="close-menu-btn" class="absolute top-6 right-6 text-empire-text/70"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg></button>
+        <div class="mt-12 flex flex-col space-y-6">
+          <a href="#problema" class="text-empire-text hover:text-empire-gold transition-colors">O Diagnóstico</a>
+          <a href="#solucao" class="text-empire-text hover:text-empire-gold transition-colors">A Solução</a>
+          <a href="#metodologia" class="text-empire-text hover:text-empire-gold transition-colors">Metodologia</a>
+          <a href="#clientes" class="text-empire-text hover:text-empire-gold transition-colors">Resultados</a>
+          <a href="#faq" class="text-empire-text hover:text-empire-gold transition-colors">FAQ</a>
+          <div class="pt-6 border-t border-empire-border"><a href="#cta" class="btn-premium block text-center text-sm">APLICAR AGORA</a></div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div class="hero-bg"></div>
+    <div class="grid-pattern absolute inset-0 z-10"></div>
+    <div class="relative z-20 max-w-6xl mx-auto px-6 lg:px-8 py-32 text-center">
+      <div class="fade-in-up">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-empire-gold/30 bg-empire-gold/5 mb-8">
+          <span class="w-2 h-2 bg-empire-gold rounded-full animate-pulse"></span>
+          <span class="text-empire-gold text-sm tracking-widest uppercase">Vagas Limitadas — Ciclo 2026</span>
+        </div>
+        <h1 class="font-display text-3xl md:text-5xl lg:text-6xl font-semibold tracking-tight mb-4 leading-tight max-w-5xl mx-auto">
+          <span class="text-gold-gradient">O sistema de conteúdo que transforma sua expertise em audiência e vendas.</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-empire-text/90 max-w-3xl mx-auto mb-6 font-light">Cansado de produzir conteúdo sem estratégia e não ver resultados? O Acelerador de Audiência implementa um método testado para você se tornar uma autoridade no seu nicho, de forma previsível e escalável.</p>
+
+        <div class="flex flex-wrap justify-center gap-6 md:gap-10 mb-12 text-sm md:text-base text-empire-text/90">
+          <div class="flex items-center gap-2"><svg class="w-5 h-5 text-empire-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Escala sem perder identidade</span></div>
+          <div class="flex items-center gap-2"><svg class="w-5 h-5 text-empire-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Demanda previsível via conteúdo</span></div>
+          <div class="flex items-center gap-2"><svg class="w-5 h-5 text-empire-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Sistema delegável que funciona sem você</span></div>
+        </div>
+        <div class="flex justify-center mb-8">
+          <img src="images/socios.png" alt="Sócios Acelerador de Audiência" class="max-w-xs md:max-w-sm w-full rounded-lg" loading="lazy">
+        </div>
+        <a href="#cta" class="btn-premium inline-flex items-center gap-3 text-lg tracking-wide">APLICAR AGORA — VAGAS LIMITADAS<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+      </div>
+    </div>
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce"><svg class="w-6 h-6 text-empire-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg></div>
+  </section>
+
+  <section id="problema" class="py-24 md:py-32 relative">
+    <div class="grid-pattern absolute inset-0 opacity-50"></div>
+    <div class="max-w-6xl mx-auto px-6 lg:px-8 relative">
+      <div class="fade-in-up">
+        <div class="max-w-4xl mx-auto text-center mb-16">
+          <p class="text-empire-gold text-sm tracking-widest uppercase mb-4">O Diagnóstico</p>
+          <h2 class="font-display text-3xl md:text-4xl lg:text-5xl leading-tight mb-8">A maioria dos especialistas acha que tem um <span class="text-gold-gradient">problema de autoridade</span> quando na verdade eles têm um problema de <span class="text-gold-gradient">falta de distribuição</span></h2>
+        </div>
+        <div class="prose prose-lg max-w-4xl mx-auto text-empire-text/80 mb-16 text-center">
+          <p class="text-xl leading-relaxed mb-6">Você acorda. Antes mesmo de abrir os olhos, já pega o celular. Abre o Instagram. Seus concorrentes postaram de novo. Cresceram mais seguidores. E você? Estagnado.</p>
+          <p class="text-lg leading-relaxed mb-6">Você vai dormir com a mesma imagem na cabeça: os concorrentes que começaram junto com você, hoje com mais alcance, mais reconhecimento, mais vendas. Enquanto isso, você paga time caro, gasta horas em reunião, e o resultado não vem.</p>
+          <p class="text-lg leading-relaxed">E quando alguém pede seu Instagram no evento, você já se desculpa antes de passar: <em>"Ah, eu nem posto direito..."</em>. Seu feed não reflete 1% do que você construiu. Você se sente <strong class="text-empire-text">invisível</strong> no próprio mercado.</p>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
+        <div class="card-hover bg-empire-card p-8 border border-empire-border hover:border-empire-gold/30">
+          <div class="w-12 h-12 rounded-lg bg-empire-gold/10 flex items-center justify-center mb-6"><svg class="w-6 h-6 text-empire-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg></div>
+          <h3 class="text-xl font-medium mb-3 text-empire-text">Seu Instagram não reflete seu sucesso no mundo real</h3>
+          <p class="text-empire-text/70 mb-4">Você construiu um negócio que fatura milhões. Mas quando pedem seu Instagram, você sente vergonha. Seu perfil não mostra 1% da sua autoridade real.</p>
+          <p class="text-empire-gold text-sm italic">"Você se sente invisível no próprio mercado."</p>
+        </div>
+        <div class="card-hover bg-empire-card p-8 border border-empire-border hover:border-empire-gold/30">
+          <div class="w-12 h-12 rounded-lg bg-empire-gold/10 flex items-center justify-center mb-6"><svg class="w-6 h-6 text-empire-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"/></svg></div>
+          <h3 class="text-xl font-medium mb-3 text-empire-text">Seu custo de aquisição de cliente só aumenta</h3>
+          <p class="text-empire-text/70 mb-4">Quanto mais você gasta em anúncios, menor o retorno. A concorrência em conteúdo explodiu. Você está pagando caro pelo que antes era gratuito.</p>
+          <p class="text-empire-gold text-sm italic">"Efeito sanfona: mais gasto, mesmo resultado."</p>
+        </div>
+        <div class="card-hover bg-empire-card p-8 border border-empire-border hover:border-empire-gold/30">
+          <div class="w-12 h-12 rounded-lg bg-empire-gold/10 flex items-center justify-center mb-6"><svg class="w-6 h-6 text-empire-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg></div>
+          <h3 class="text-xl font-medium mb-3 text-empire-text">Seu time não consegue produzir conteúdo que te represente</h3>
+          <p class="text-empire-text/70 mb-4">Você contratou agências, trocou time, pagou caro. Mas o resultado são posts genéricos que poderiam ser de qualquer empresa. Não têm sua voz, sua opinião, sua autoridade.</p>
+          <p class="text-empire-gold text-sm italic">"Você delegou 100% achando que resolveria. Mas sem processo, não existe escala."</p>
+        </div>
+        <div class="card-hover bg-empire-card p-8 border border-empire-border hover:border-empire-gold/30">
+          <div class="w-12 h-12 rounded-lg bg-empire-gold/10 flex items-center justify-center mb-6"><svg class="w-6 h-6 text-empire-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg></div>
+          <h3 class="text-xl font-medium mb-3 text-empire-text">Você replica o que vê outros fazendo</h3>
+          <p class="text-empire-text/70 mb-4">Tenta seguir tendências, copiar formatos, fazer o que "está dando certo". Mas quanto mais copia, menos você parece você.</p>
+          <p class="text-empire-gold text-sm italic">"Conteúdo pode ser replicado. Identidade, coerência e critério não."</p>
+        </div>
+        <div class="card-hover bg-empire-card p-8 border border-empire-border hover:border-empire-gold/30">
+          <div class="w-12 h-12 rounded-lg bg-empire-gold/10 flex items-center justify-center mb-6"><svg class="w-6 h-6 text-empire-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg></div>
+          <h3 class="text-xl font-medium mb-3 text-empire-text">Você é refém da produção manual</h3>
+          <p class="text-empire-text/70 mb-4">Se você parar de gravar hoje, sua presença morre em uma semana. Não existe sistema. Não existe equipe treinada. Não existe processo.</p>
+          <p class="text-empire-gold text-sm italic">"Autoridade que depende de você não é um ativo. É um apagão esperando para acontecer."</p>
+        </div>
+        <div class="card-hover bg-empire-card p-8 border border-empire-border hover:border-empire-gold/30 md:col-span-2 lg:col-span-1">
+          <div class="w-12 h-12 rounded-lg bg-empire-gold/10 flex items-center justify-center mb-6"><svg class="w-6 h-6 text-empire-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg></div>
+          <h3 class="text-xl font-medium mb-3 text-empire-text">Você tem audiência, mas não tem clientes</h3>
+          <p class="text-empire-text/70 mb-4">Suas métricas até engordaram — seguidores, visualizações, alcance. Mas o telefone não toca. As pessoas assistem, curtem, comentam... e ninguém compra.</p>
+          <p class="text-empire-gold text-sm italic">"Plateia aplaude. Cliente paga."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="solucao" class="py-24 md:py-32 bg-empire-surface relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-empire-gold/5 to-transparent opacity-50"></div>
+    <div class="max-w-6xl mx-auto px-6 lg:px-8 relative">
+      <div class="text-center mb-16 fade-in-up">
+        <p class="text-empire-gold text-sm tracking-widest uppercase mb-4">A Solução</p>
+        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl max-w-4xl mx-auto">O Acelerador de Audiência <span class="text-gold-gradient">amplifica sua mensagem</span> e sua autoridade</h2>
+      </div>
+      <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div class="lg:col-span-7 order-1 fade-in-up">
+          <div class="relative">
+            <div class="aspect-[4/3] lg:aspect-[16/10] rounded-lg overflow-hidden border border-empire-gold/20"><img src="images/1.webp" alt="Sistema de Distribuição de Autoridade" class="w-full h-full object-cover" fetchpriority="high" width="1920" height="1200"></div>
+            <div class="absolute -bottom-4 -right-4 w-24 h-24 md:w-32 md:h-32 bg-empire-gold/10 rounded-lg -z-10"></div>
+            <div class="absolute -top-4 -left-4 w-16 h-16 md:w-24 md:h-24 border border-empire-gold/20 rounded-lg -z-10"></div>
+          </div>
+        </div>
+        <div class="lg:col-span-5 order-2 fade-in-up">
+          <div class="space-y-6">
+            <div class="bg-empire-card p-6 border border-empire-gold/20 rounded-lg">
+              <p class="text-xl text-empire-text mb-3">A maioria das agências cria conteúdo <span class="italic">"de fora para dentro"</span> — olhando trends e viralização.</p>
+              <p class="text-empire-gold font-semibold text-lg">Nós criamos conteúdo "de dentro para fora" — da sua essência para o mundo.</p>
+            </div>
+            <div class="space-y-4">
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded-full bg-empire-gold/10 flex items-center justify-center flex-shrink-0 mt-0.5"><span class="text-empire-gold text-sm font-bold">1</span></div>
+                <p class="text-empire-text/80">Autoridade não é sobre ser <em>bom</em>. É sobre ser <span class="text-empire-text font-medium">visto</span>.</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded-full bg-empire-gold/10 flex items-center justify-center flex-shrink-0 mt-0.5"><span class="text-empire-gold text-sm font-bold">2</span></div>
+                <p class="text-empire-text/80">Significa estar nos <span class="text-empire-text font-medium">lugares certos</span>, na <span class="text-empire-text font-medium">frequência certa</span>, com a <span class="text-empire-text font-medium">mensagem certa</span>.</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded-full bg-empire-gold/10 flex items-center justify-center flex-shrink-0 mt-0.5"><span class="text-empire-gold text-sm font-bold">3</span></div>
+                <p class="text-empire-text/80">Autoridade é construída <span class="text-empire-text font-medium">por onde você aparece</span>.</p>
+              </div>
+            </div>
+            <div class="bg-gradient-to-br from-empire-gold/10 to-transparent p-6 border border-empire-gold/20 rounded-lg">
+              <p class="text-empire-text font-medium mb-4">Pergunte-se:</p>
+              <ul class="space-y-2 text-empire-text/80 text-sm">
+                <li class="flex items-center gap-2"><span class="text-empire-gold">→</span>Sua mensagem está chegando nas pessoas certas?</li>
+                <li class="flex items-center gap-2"><span class="text-empire-gold">→</span>Com a consistência necessária?</li>
+                <li class="flex items-center gap-2"><span class="text-empire-gold">→</span>No formato que elas consomem?</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-16 text-center fade-in-up">
+        <div class="inline-block bg-empire-card px-8 py-6 border border-empire-gold/20 rounded-lg">
+          <p class="text-empire-text/80 text-lg mb-2">Se a resposta for não, não é sua autoridade que está fraca.</p>
+          <p class="text-empire-gold font-semibold text-xl">É sua distribuição que está ausente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-24 md:py-32 relative">
+    <div class="grid-pattern absolute inset-0 opacity-30"></div>
+    <div class="max-w-6xl mx-auto px-6 lg:px-8 relative">
+      <div class="text-center mb-16 fade-in-up">
+        <p class="text-empire-gold text-sm tracking-widest uppercase mb-4">A Diferença</p>
+        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl">O que nos separa do mercado de produção de conteúdo</h2>
+      </div>
+      <div class="overflow-x-auto fade-in-up">
+        <table class="w-full border-collapse">
+          <thead>
+            <tr>
+              <th class="text-left p-4 border-b border-empire-border text-empire-text/60 font-normal text-sm">O que o mercado faz</th>
+              <th class="text-left p-4 border-b border-empire-border text-empire-gold font-medium">O que nós fazemos</th>
+            </tr>
+          </thead>
+          <tbody class="text-empire-text">
+            <tr class="border-b border-empire-border/50">
+              <td class="p-4 text-empire-text/60">Exige que você grave reels e conteúdo curto constantemente</td>
+              <td class="p-4"><span class="text-empire-gold">Você não precisa gravar conteúdo curto.</span> Transformamos o que você já produz naturalmente</td>
+            </tr>
+            <tr class="border-b border-empire-border/50">
+              <td class="p-4 text-empire-text/60">Cria conteúdo "de fora para dentro" — baseado em trends, viralização</td>
+              <td class="p-4"><span class="text-empire-gold">Criamos conteúdo "de dentro para fora"</span> — baseado na sua essência, sua voz, seus pilares únicos</td>
+            </tr>
+            <tr class="border-b border-empire-border/50">
+              <td class="p-4 text-empire-text/60">Foco em volume a qualquer custo — postar por postar</td>
+              <td class="p-4"><span class="text-empire-gold">Foco em consistência estratégica</span> — cada peça serve um propósito de negócio</td>
+            </tr>
+            <tr class="border-b border-empire-border/50">
+              <td class="p-4 text-empire-text/60">Consultoria teórica — te dizem o que fazer, você faz sozinho</td>
+              <td class="p-4"><span class="text-empire-gold">Implementação prática</span> — fazemos junto, criamos os ativos, treinamos seu time</td>
+            </tr>
+            <tr>
+              <td class="p-4 text-empire-text/60">Dependência perpétua — você precisa deles para sempre</td>
+              <td class="p-4"><span class="text-empire-gold">Transição de autonomia</span> — você ganha o sistema e assume o controle</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="mt-16 bg-empire-card border border-empire-gold/20 p-8 rounded-lg fade-in-up">
+        <h3 class="font-display text-2xl mb-4 text-empire-gold">Como Funciona na Prática</h3>
+        <p class="text-empire-text/80 text-center mb-8">Gravar uma aula de 1 hora é mais fácil que gravar um reel de 30 segundos. A gente te ensina a transformar essa 1 hora em escala — você e seu time executam.</p>
+        
+        <div class="grid md:grid-cols-3 gap-6 mb-8">
+          <div class="bg-empire-bg/50 p-6 rounded-lg text-center">
+            <div class="w-12 h-12 rounded-full bg-empire-gold/10 flex items-center justify-center mx-auto mb-4">
+              <span class="text-empire-gold font-display text-xl">1</span>
+            </div>
+            <h4 class="text-empire-text font-medium mb-2">Você Grava 1 Hora</h4>
+            <p class="text-empire-text/60 text-sm">Aula, podcast, live ou vídeo longo sobre o que você domina. O que você já faz naturalmente.</p>
+          </div>
+          <div class="bg-empire-bg/50 p-6 rounded-lg text-center">
+            <div class="w-12 h-12 rounded-full bg-empire-gold/10 flex items-center justify-center mx-auto mb-4">
+              <span class="text-empire-gold font-display text-xl">2</span>
+            </div>
+            <h4 class="text-empire-text font-medium mb-2">Você Aprende a Extrair</h4>
+            <p class="text-empire-text/60 text-sm">Te ensinamos a usar o Mapa de Produção para identificar cortes, trechos e temas para cada canal.</p>
+          </div>
+          <div class="bg-empire-bg/50 p-6 rounded-lg text-center">
+            <div class="w-12 h-12 rounded-full bg-empire-gold/10 flex items-center justify-center mx-auto mb-4">
+              <span class="text-empire-gold font-display text-xl">3</span>
+            </div>
+            <h4 class="text-empire-text font-medium mb-2">Seu Time Produz 50+ Peças</h4>
+            <p class="text-empire-text/60 text-sm">Seu editor, designer e redator sabem exatamente o que fazer com o conteúdo fonte.</p>
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-br from-empire-gold/5 via-empire-card/50 to-empire-card border border-empire-gold/20 p-8 rounded-lg relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-empire-gold/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+          <div class="relative">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-10 h-10 rounded-lg bg-empire-gold/10 flex items-center justify-center">
+                <svg class="w-5 h-5 text-empire-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              </div>
+              <h4 class="text-empire-gold font-medium">Exemplo do Sistema</h4>
+            </div>
+            
+            <div class="grid md:grid-cols-12 gap-4 items-center">
+              <!-- Input -->
+              <div class="md:col-span-5 bg-empire-surface/50 border border-empire-border rounded-lg p-5">
+                <div class="flex items-center gap-2 mb-3">
+                  <svg class="w-4 h-4 text-empire-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/></svg>
+                  <span class="text-empire-text/60 text-xs uppercase tracking-wider">Entrada</span>
+                </div>
+                <p class="text-empire-text font-medium">Podcast de 1 hora</p>
+                <p class="text-empire-text/70 text-sm">"Como escolher o procedimento certo"</p>
+                <div class="mt-3 flex items-center gap-2 text-empire-text/50 text-xs">
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  <span>60 minutos gravados</span>
+                </div>
+              </div>
+              
+              <!-- Arrow -->
+              <div class="md:col-span-2 flex justify-center">
+                <div class="flex flex-col items-center gap-1">
+                  <div class="w-10 h-10 rounded-full bg-empire-gold/10 border border-empire-gold/30 flex items-center justify-center">
+                    <svg class="w-5 h-5 text-empire-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                  </div>
+                  <span class="text-empire-gold text-xs">Mapa de Produção</span>
+                </div>
+              </div>
+              
+              <!-- Output -->
+              <div class="md:col-span-5 bg-gradient-to-br from-empire-gold/10 to-empire-gold/5 border border-empire-gold/30 rounded-lg p-5">
+                <div class="flex items-center gap-2 mb-3">
+                  <svg class="w-4 h-4 text-empire-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                  <span class="text-empire-gold text-xs uppercase tracking-wider">Saída</span>
+                </div>
+                <div class="space-y-2">
+                  <div class="flex items-center gap-2 text-empire-text text-sm">
+                    <span class="w-5 h-5 rounded bg-empire-gold/20 text-empire-gold text-xs flex items-center justify-center font-medium">15</span>
+                    <span>Cortes virais para Reels/TikTok/Shorts</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-empire-text text-sm">
+                    <span class="w-5 h-5 rounded bg-empire-gold/20 text-empire-gold text-xs flex items-center justify-center font-medium">8</span>
+                    <span>Carrosséis para Instagram</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-empire-text text-sm">
+                    <span class="w-5 h-5 rounded bg-empire-gold/20 text-empire-gold text-xs flex items-center justify-center font-medium">12</span>
+                    <span>Posts com legenda para LinkedIn</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-empire-text text-sm">
+                    <span class="w-5 h-5 rounded bg-empire-gold/20 text-empire-gold text-xs flex items-center justify-center font-medium">5</span>
+                    <span>Stories sequenciais</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-empire-text text-sm">
+                    <span class="w-5 h-5 rounded bg-empire-gold/20 text-empire-gold text-xs flex items-center justify-center font-medium">4</span>
+                    <span>Tweets/Threads para X</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-empire-text text-sm">
+                    <span class="w-5 h-5 rounded bg-empire-gold/20 text-empire-gold text-xs flex items-center justify-center font-medium">3</span>
+                    <span>Newsletters por e-mail</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-empire-text text-sm">
+                    <span class="w-5 h-5 rounded bg-empire-gold/20 text-empire-gold text-xs flex items-center justify-center font-medium">6</span>
+                    <span>Peças de blog/artigos</span>
+                  </div>
+                </div>
+                <div class="mt-3 pt-3 border-t border-empire-gold/20 flex items-center justify-between text-xs">
+                  <span class="text-empire-text/50">Total: 50+ peças</span>
+                  <span class="text-empire-gold flex items-center gap-1">
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                    50x mais conteúdo
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-6 pt-5 border-t border-empire-border flex items-start gap-3">
+              <svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <p class="text-empire-text/60 text-sm">Você não recebe conteúdo pronto. Você recebe o <strong class="text-empire-text">sistema</strong> para produzir conteúdo em escala com seu time.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="metodologia" class="py-24 md:py-32 bg-empire-surface">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-16 fade-in-up">
+        <p class="text-empire-gold text-sm tracking-widest uppercase mb-4">A Metodologia</p>
+        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl mb-6">Como Funciona o <span class="text-gold-gradient">Acelerador de Audiência</span></h2>
+        <p class="text-empire-text/80 text-lg max-w-3xl mx-auto">O programa é dividido em <strong class="text-empire-text">5 fases</strong>, organizadas em <strong class="text-empire-text">2 programas</strong>. Você começa com diagnóstico e planejamento — e termina operando o sistema com autonomia total.</p>
+      </div>
+
+      <div class="mb-6">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="h-px flex-1 bg-gradient-to-r from-transparent to-empire-gold/30"></div>
+          <span class="text-empire-gold text-xs tracking-widest uppercase font-medium px-4 py-2 border border-empire-gold/30 rounded-full bg-empire-gold/5">Programa 1 — Entrada (Fases 1, 2 e 3)</span>
+          <div class="h-px flex-1 bg-gradient-to-l from-transparent to-empire-gold/30"></div>
+        </div>
+        <div class="space-y-6">
+          <div class="bg-gradient-to-br from-empire-gold/5 to-transparent border border-empire-gold/20 p-8 rounded-lg fade-in-up">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 rounded-lg bg-empire-gold/10 flex items-center justify-center flex-shrink-0"><span class="text-2xl font-display text-gold-gradient">01</span></div>
+              <div><h3 class="text-xl font-medium text-empire-text">Fase 1 — Diagnóstico</h3><p class="text-empire-text/70 text-sm">Antes de qualquer ação, você precisa saber exatamente onde está</p></div>
+            </div>
+            <div class="mb-6">
+              <p class="text-empire-text/80 mb-4">Analisamos tudo que você já produz e publica — conteúdos do YouTube, Instagram, LinkedIn, TikTok, tom de voz, formatos utilizados. Cada item é classificado como <strong class="text-empire-text">risco</strong> (prejudica sua marca) ou <strong class="text-empire-text">oportunidade</strong> (pode gerar resultado).</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+              <div class="bg-empire-card/50 p-5 border border-empire-border rounded-lg">
+                <h4 class="text-empire-gold font-medium mb-3 text-sm uppercase tracking-wide">O que analisamos:</h4>
+                <ul class="text-empire-text/70 text-sm space-y-3">
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg><span>Esse conteúdo comunica o que sua marca quer comunicar?</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg><span>Reforça ou contradiz sua identidade?</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg><span>Pode causar problemas ou mal-entendidos?</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg><span>Pode ser melhorado ou reaproveitado?</span></li>
+                </ul>
+              </div>
+              <div class="bg-empire-card/50 p-5 border border-empire-border rounded-lg">
+                <h4 class="text-empire-gold font-medium mb-3 text-sm uppercase tracking-wide">Você recebe:</h4>
+                <p class="text-empire-text font-medium mb-3">Mapa de Riscos e Oportunidades</p>
+                <ul class="text-empire-text/70 text-sm space-y-2">
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>O que está certo (mantenha)</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg><span>O que está errado (elimine)</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg><span>O que pode melhorar (ajuste)</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg><span>O que deve evitar (riscos)</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="bg-empire-card/30 p-4 rounded-lg">
+              <p class="text-empire-text/80 text-sm"><strong class="text-empire-gold">Resultado:</strong> Clareza total sobre o estado da sua comunicação. Você sabe exatamente onde focar o esforço para gerar mais resultado — sem achismos.</p>
+            </div>
+          </div>
+          <div class="bg-gradient-to-br from-empire-gold/5 to-transparent border border-empire-gold/20 p-8 rounded-lg fade-in-up">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 rounded-lg bg-empire-gold/10 flex items-center justify-center flex-shrink-0"><span class="text-2xl font-display text-gold-gradient">02</span></div>
+              <div><h3 class="text-xl font-medium text-empire-text">Fase 2 — Brand Book</h3><p class="text-empire-text/70 text-sm">A narrativa que vai fazer as pessoas reconhecerem você em qualquer canal</p></div>
+            </div>
+            <div class="mb-6">
+              <p class="text-empire-text/80 mb-4">Construímos o <strong class="text-empire-text">Brand Book</strong> — o documento que define sua identidade narrativa. Vai além de "o que você faz": define <strong class="text-empire-text">como você conta a história</strong> do que você faz, para quem você conta e com que tom.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+              <div class="bg-empire-card/50 p-5 border border-empire-border rounded-lg">
+                <h4 class="text-empire-gold font-medium mb-3 text-sm uppercase tracking-wide">O documento define:</h4>
+                <ul class="text-empire-text/70 text-sm space-y-3">
+                  <li><strong class="text-empire-text">Narrativa central:</strong> A história que sua marca quer contar ao mundo. (Ex: "Vim do zero e construí na raça")</li>
+                  <li><strong class="text-empire-text">Tese da marca:</strong> O ponto de vista que só você defende. No que você acredita que é diferente?</li>
+                  <li><strong class="text-empire-text">Tom de voz:</strong> Formal ou informal? Técnico ou acessível? Provocador ou didático?</li>
+                  <li><strong class="text-empire-text">Cliente ideal:</strong> Para quem seus conteúdos são produzidos — com precisão.</li>
+                </ul>
+              </div>
+              <div class="bg-empire-card/50 p-5 border border-empire-border rounded-lg">
+                <h4 class="text-empire-gold font-medium mb-3 text-sm uppercase tracking-wide">Por que isso importa:</h4>
+                <ul class="text-empire-text/70 text-sm space-y-3">
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Todo conteúdo segue o mesmo padrão — você não precisa corrigir erro de comunicação</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Impede que conteúdos fora do tom sejam publicados</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Sua audiência te identifica em qualquer canal, sem ver seu nome</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Novos colaboradores entendem rapidamente como a marca fala</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Você para de ser "uma marca diferente em cada canal"</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="bg-empire-card/30 p-4 rounded-lg">
+              <p class="text-empire-text/80 text-sm"><strong class="text-empire-gold">Resultado:</strong> Consistência total. Seu editor, roteirista e social media sabem exatamente o que fazer — sem você precisar revisar post por post.</p>
+            </div>
+          </div>
+          <div class="bg-gradient-to-br from-empire-gold/5 to-transparent border border-empire-gold/20 p-8 rounded-lg fade-in-up">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 rounded-lg bg-empire-gold/10 flex items-center justify-center flex-shrink-0"><span class="text-2xl font-display text-gold-gradient">03</span></div>
+              <div><h3 class="text-xl font-medium text-empire-text">Fase 3 — Estratégia Operacional</h3><p class="text-empire-text/70 text-sm">Montamos o <strong class="text-empire-gold">sistema de conteúdo</strong> que vai funcionar no dia a dia</p></div>
+            </div>
+            <div class="mb-6">
+              <p class="text-empire-text/80 mb-4">Agora a estratégia vira operação. Com o diagnóstico feito e a identidade definida, montamos três ferramentas práticas:</p>
+            </div>
+            <div class="space-y-4 mb-6">
+              <div class="bg-empire-card/50 p-5 border border-empire-border rounded-lg">
+                <div class="flex items-start gap-4">
+                  <div class="w-8 h-8 rounded bg-empire-gold/10 flex items-center justify-center flex-shrink-0 mt-0.5"><span class="text-empire-gold text-sm font-bold">A</span></div>
+                  <div>
+                    <h4 class="text-empire-text font-medium mb-2">Linha Editorial</h4>
+                    <p class="text-empire-text/70 text-sm mb-2">O plano de conteúdo estruturado: quantos formatos por semana, qual frequência, e se haverá <strong class="text-empire-text">microprogramas</strong> (séries recorrentes que criam expectativa).</p>
+                    <p class="text-empire-text/60 text-sm italic">Exemplo: "Toda terça: vídeo técnico. Toda quinta: bastidores. Toda sexta: resumo da semana."</p>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-empire-card/50 p-5 border border-empire-border rounded-lg">
+                <div class="flex items-start gap-4">
+                  <div class="w-8 h-8 rounded bg-empire-gold/10 flex items-center justify-center flex-shrink-0 mt-0.5"><span class="text-empire-gold text-sm font-bold">B</span></div>
+                  <div>
+                    <h4 class="text-empire-text font-medium mb-2">Mapa de Produção</h4>
+                    <p class="text-empire-text/70 text-sm mb-2">O documento que transforma <strong class="text-empire-text">1 conteúdo em múltiplos formatos</strong>. É o sistema de reaproveitamento: você grava uma aula de 1 hora, nós extraímos cortes para Reels, trechos para posts, temas para carrosséis, resumo para newsletter.</p>
+                    <p class="text-empire-text/60 text-sm">Você recebe o template + aprende a usar. Sua equipe sabe exatamente o que extrair e para qual profissional encaminhar.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-empire-card/50 p-5 border border-empire-border rounded-lg">
+                <div class="flex items-start gap-4">
+                  <div class="w-8 h-8 rounded bg-empire-gold/10 flex items-center justify-center flex-shrink-0 mt-0.5"><span class="text-empire-gold text-sm font-bold">C</span></div>
+                  <div>
+                    <h4 class="text-empire-text font-medium mb-2">Mapa de Distribuição</h4>
+                    <p class="text-empire-text/70 text-sm mb-2">A planilha central de operação. Organiza <strong class="text-empire-text">quando, onde e quanto</strong> publicar em cada canal — e depois registra o desempenho de cada peça.</p>
+                    <p class="text-empire-text/60 text-sm">Você para de adivinhar. Os dados mostram o que funciona, o que não funciona, e onde ajustar.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bg-empire-card/30 p-4 rounded-lg">
+              <p class="text-empire-text/80 text-sm"><strong class="text-empire-gold">Resultado:</strong> Você tem um sistema completo. Sabe o que produzir, como transformar 1 hora em 50+ peças, quando publicar e como medir resultados.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="flex items-center gap-4 mb-6">
+          <div class="h-px flex-1 bg-gradient-to-r from-transparent to-empire-gold/30"></div>
+          <span class="text-empire-gold text-xs tracking-widest uppercase font-medium px-4 py-2 border border-empire-gold/30 rounded-full bg-empire-gold/5">Programa 2 — Continuidade (Fases 4 e 5)</span>
+          <div class="h-px flex-1 bg-gradient-to-l from-transparent to-empire-gold/30"></div>
+        </div>
+        <div class="space-y-6">
+          <div class="bg-gradient-to-br from-empire-gold/5 to-transparent border border-empire-gold/20 p-8 rounded-lg fade-in-up">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 rounded-lg bg-empire-gold/10 flex items-center justify-center flex-shrink-0"><span class="text-2xl font-display text-gold-gradient">04</span></div>
+              <div><h3 class="text-xl font-medium text-empire-text">Fase 4 — Acompanhamento</h3><p class="text-empire-text/70 text-sm">Nós <strong class="text-empire-gold">FAZEMOS PARA VOCÊ</strong> — você aprende vendo na prática</p></div>
+            </div>
+            <div class="mb-6">
+              <p class="text-empire-text/80 mb-4">O time entra em campo e executa junto. Não apenas explicamos — <strong class="text-empire-text">fazemos</strong>. Essa é a diferença entre aprender teoria e ver o sistema rodando de verdade.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+              <div class="bg-empire-card/50 p-5 border border-empire-border rounded-lg">
+                <h4 class="text-empire-gold font-medium mb-3 text-sm uppercase tracking-wide">O que fazemos:</h4>
+                <ul class="text-empire-text/70 text-sm space-y-3">
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span>Produzimos os <strong class="text-empire-text">primeiros roteiros</strong> de conteúdo baseados no seu Brand Book</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span>Montamos os <strong class="text-empire-text">primeiros Mapas de Produção</strong> preenchidos com seus conteúdos</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span>Preenchemos os <strong class="text-empire-text">primeiros Mapas de Distribuição</strong> com grade completa</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span>Você <strong class="text-empire-text">observa e acompanha</strong> — não precisa fazer nada nessa fase</span></li>
+                </ul>
+              </div>
+              <div class="bg-empire-card/50 p-5 border border-empire-border rounded-lg">
+                <h4 class="text-empire-gold font-medium mb-3 text-sm uppercase tracking-wide">Por que isso funciona:</h4>
+                <ul class="text-empire-text/70 text-sm space-y-3">
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Você aprende por <strong class="text-empire-text">observação</strong> — muito mais eficaz que só estudar</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Tem <strong class="text-empire-text">exemplos concretos</strong> do seu próprio negócio para seguir</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Vê o sistema gerando <strong class="text-empire-text">leads e demanda</strong> antes de assumir</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Reduz a insegurança de "e agora, como eu faço?"</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="bg-empire-card/30 p-4 rounded-lg">
+              <p class="text-empire-text/80 text-sm"><strong class="text-empire-gold">Resultado:</strong> Conteúdo imediato pronto para publicar. Quando chegar a hora de operar sozinho, você já sabe exatamente o que fazer — porque já viu funcionando.</p>
+            </div>
+          </div>
+          <div class="bg-gradient-to-br from-empire-gold/5 to-transparent border border-empire-gold/20 p-8 rounded-lg fade-in-up">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 rounded-lg bg-empire-gold/10 flex items-center justify-center flex-shrink-0"><span class="text-2xl font-display text-gold-gradient">05</span></div>
+              <div><h3 class="text-xl font-medium text-empire-text">Fase 5 — Transição</h3><p class="text-empire-text/70 text-sm"><strong class="text-empire-gold">VOCÊ ASSUME</strong> — autonomia total, sem depender de ninguém</p></div>
+            </div>
+            <div class="mb-6">
+              <p class="text-empire-text/80 mb-4">A fase de <strong class="text-empire-text">passagem do bastão</strong>. O time transfere a operação para você, que agora tem tudo o que precisa para tocar o processo de forma autônoma e contínua.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+              <div class="bg-empire-card/50 p-5 border border-empire-border rounded-lg">
+                <h4 class="text-empire-gold font-medium mb-3 text-sm uppercase tracking-wide">Como funciona:</h4>
+                <ul class="text-empire-text/70 text-sm space-y-3">
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg><span><strong class="text-empire-text">Revisão completa:</strong> Revisamos tudo que foi entregue em cada fase</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg><span><strong class="text-empire-text">Orientação de continuidade:</strong> Como usar o Mapa de Produção para novos conteúdos</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg><span><strong class="text-empire-text">Gestão da distribuição:</strong> Como preencher o Mapa de Distribuição semanalmente</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg><span><strong class="text-empire-text">Leitura de dados:</strong> Como ajustar a estratégia com base no desempenho</span></li>
+                </ul>
+              </div>
+              <div class="bg-empire-card/50 p-5 border border-empire-border rounded-lg">
+                <h4 class="text-empire-gold font-medium mb-3 text-sm uppercase tracking-wide">O que você ganha:</h4>
+                <ul class="text-empire-text/70 text-sm space-y-3">
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span><strong class="text-empire-text">Autonomia total:</strong> Opera o sistema sozinho, sem depender de nós</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span><strong class="text-empire-text">Sistema instalado:</strong> Todas as ferramentas prontas e funcionando</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span><strong class="text-empire-text">Independência:</strong> O processo continua gerando resultado mesmo depois do programa</span></li>
+                  <li class="flex items-start gap-3"><svg class="w-4 h-4 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span><strong class="text-empire-text">Escalabilidade:</strong> Pode contratar mais pessoas e onboardar com o Brand Book</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="bg-empire-card/30 p-4 rounded-lg">
+              <p class="text-empire-text/80 text-sm"><strong class="text-empire-gold">Resultado:</strong> Você tem um sistema de geração de demanda rodando — com leads qualificados chegando, vendas aumentando, e total independência operacional.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="transformacao" class="py-24 md:py-32 relative">
+    <div class="grid-pattern absolute inset-0 opacity-30"></div>
+    <div class="max-w-6xl mx-auto px-6 lg:px-8 relative">
+      <div class="text-center mb-16 fade-in-up">
+        <p class="text-empire-gold text-sm tracking-widest uppercase mb-4">A Transformação</p>
+        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl mb-6">De <span class="text-empire-gold">Invisível</span> a <span class="text-gold-gradient">Autoridade</span></h2>
+        <p class="text-empire-text/80 text-lg max-w-3xl mx-auto">O que muda na prática quando você implementa o sistema:</p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-8 mb-16">
+        <div class="bg-gradient-to-br from-red-900/10 to-transparent border border-red-900/30 p-8 rounded-lg fade-in-up">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-full bg-red-900/20 flex items-center justify-center">
+              <svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+            </div>
+            <h3 class="text-xl font-medium text-red-400">ANTES — O Inferno</h3>
+          </div>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-red-900/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              </div>
+              <div>
+                <p class="text-empire-text font-medium">Acorda angustiado</p>
+                <p class="text-empire-text/60 text-sm">Dorme e acorda pensando nos concorrentes que estão te ultrapassando no Instagram</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-red-900/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              </div>
+              <div>
+                <p class="text-empire-text font-medium">Vergonha do Instagram</p>
+                <p class="text-empire-text/60 text-sm">Evita passar seu arroba em eventos. Seu perfil não reflete seu sucesso real</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-red-900/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              </div>
+              <div>
+                <p class="text-empire-text font-medium">Time que não entrega</p>
+                <p class="text-empire-text/60 text-sm">Paga caro em folha para profissionais que produzem conteúdo genérico</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-red-900/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              </div>
+              <div>
+                <p class="text-empire-text font-medium">Caos operacional</p>
+                <p class="text-empire-text/60 text-sm">Gasta mais tempo organizando o time do que fazendo o que realmente importa</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-red-900/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              </div>
+              <div>
+                <p class="text-empire-text font-medium">Custo de aquisição disparando</p>
+                <p class="text-empire-text/60 text-sm">Cada lead custa mais que o anterior. Conversão caindo</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-red-900/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              </div>
+              <div>
+                <p class="text-empire-text font-medium">Invisível no mercado</p>
+                <p class="text-empire-text/60 text-sm">Não é chamado para podcasts, palestras ou oportunidades de visibilidade</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gradient-to-br from-emerald-900/10 to-transparent border border-emerald-900/30 p-8 rounded-lg fade-in-up">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-full bg-emerald-900/20 flex items-center justify-center">
+              <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3 class="text-xl font-medium text-emerald-400">DEPOIS — O Paraíso</h3>
+          </div>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-emerald-900/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <p class="text-empire-text font-medium">Acorda tranquilo</p>
+                <p class="text-empire-text/60 text-sm">Sabe que o sistema está rodando. Sua marca trabalhou enquanto você dormia</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-emerald-900/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <p class="text-empire-text font-medium">Orgulho do Instagram</p>
+                <p class="text-empire-text/60 text-sm">Compartilha seu perfil com satisfação. Finalmente reflete quem você é</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-emerald-900/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <p class="text-empire-text font-medium">Time autônomo</p>
+                <p class="text-empire-text/60 text-sm">Sua equipe sabe exatamente o que fazer com o Brand Book e os Mapas</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-emerald-900/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <p class="text-empire-text font-medium">Sistema documentado</p>
+                <p class="text-empire-text/60 text-sm">Você grava 1 hora por semana. O sistema transforma em 50+ peças</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-emerald-900/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <p class="text-empire-text font-medium">CAC reduzido, conversão alta</p>
+                <p class="text-empire-text/60 text-sm">Leads chegam mais conscientes. Menos objeções, mais vendas</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-emerald-900/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <p class="text-empire-text font-medium">Autoridade reconhecida</p>
+                <p class="text-empire-text/60 text-sm">Chamado para podcasts, palestras, parcerias. As pessoas querem ouvi-lo</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6 fade-in-up">
+        <!-- ANTES -->
+        <div class="bg-gradient-to-br from-empire-gold/5 to-transparent border border-empire-gold/20 p-8 rounded-lg">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-full bg-empire-gold/10 flex items-center justify-center">
+              <svg class="w-5 h-5 text-empire-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3 class="text-xl font-medium text-empire-gold">ANTES</h3>
+          </div>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-red-900/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              </div>
+              <div>
+                <p class="text-empire-text font-medium">1 conteúdo por vez</p>
+                <p class="text-empire-text/60 text-sm">Cada post exige sentar, criar, gravar, editar. Consome horas do seu dia.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-red-900/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              </div>
+              <div>
+                <p class="text-empire-text font-medium">Você faz tudo</p>
+                <p class="text-empire-text/60 text-sm">Não existe sistema. Cada peça é criada manualmente do zero.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-red-900/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              </div>
+              <div>
+                <p class="text-empire-text font-medium">Resultado imprevisível</p>
+                <p class="text-empire-text/60 text-sm">Não sabe o que vai sair, quando vai sair, ou se vai funcionar.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DEPOIS -->
+        <div class="bg-gradient-to-br from-empire-gold/5 to-transparent border border-empire-gold/20 p-8 rounded-lg">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-full bg-empire-gold/10 flex items-center justify-center">
+              <svg class="w-5 h-5 text-empire-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3 class="text-xl font-medium text-empire-gold">DEPOIS</h3>
+          </div>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-emerald-900/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <p class="text-empire-text font-medium">1 hora vira 50+ peças</p>
+                <p class="text-empire-text/60 text-sm">Seu time usa o sistema para extrair múltiplos formatos automaticamente.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-emerald-900/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <p class="text-empire-text font-medium">Sistema delegável</p>
+                <p class="text-empire-text/60 text-sm">Você foca no negócio. Seu time executa seguindo o Brand Book e Mapas.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-emerald-900/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <p class="text-empire-text font-medium">Produção previsível</p>
+                <p class="text-empire-text/60 text-sm">Sabe exatamente quanto conteúdo vai sair, quando, e com qual tom.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 p-6 bg-empire-card/50 border border-empire-border rounded-lg flex items-start gap-4">
+        <svg class="w-5 h-5 text-empire-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <p class="text-empire-text/60 text-sm">Resultados de leads e conversão dependem do seu produto, tráfego e oferta. O que entregamos é o <strong class="text-empire-text">sistema de escala de conteúdo</strong>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="clientes" class="py-24 md:py-32 bg-empire-surface relative overflow-hidden">
+    <div class="grid-pattern absolute inset-0 opacity-30"></div>
+    <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-empire-gold/30 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-empire-gold/30 to-transparent"></div>
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 relative">
+      <div class="text-center mb-16 fade-in-up">
+        <p class="text-empire-gold text-sm tracking-widest uppercase mb-4">Confiança Institucional</p>
+        <h2 class="font-display text-3xl md:text-5xl mb-6">Quem já <span class="text-gold-gradient">transformou</span> sua audiência</h2>
+        <p class="text-empire-text/80 text-lg max-w-2xl mx-auto">CEOs e especialistas que construíram autoridade real — com números que falam por si.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 stagger-children">
+        <div class="client-card group relative overflow-hidden rounded-lg border border-empire-border bg-empire-card cursor-default">
+          <div class="relative overflow-hidden"><img src="images/clientes/Frame 3.webp" alt="Thiago Reis — CEO da Growth Machine — 1 Milhão de seguidores em 14 meses" class="w-full h-auto block transition-transform duration-700 group-hover:scale-105" loading="lazy" width="600" height="750"><div class="absolute inset-0 bg-gradient-to-t from-empire-card via-transparent to-transparent opacity-0 group-hover:opacity-60 transition-opacity duration-500"></div></div>
+          <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-empire-goldDark via-empire-gold to-empire-goldLight transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+        </div>
+        <div class="client-card group relative overflow-hidden rounded-lg border border-empire-border bg-empire-card cursor-default">
+          <div class="relative overflow-hidden"><img src="images/clientes/Frame 4.webp" alt="Otávio Amaral — CEO da Go2Sell — De 1.000 a 70.000 seguidores em 4 meses" class="w-full h-auto block transition-transform duration-700 group-hover:scale-105" loading="lazy" width="600" height="750"><div class="absolute inset-0 bg-gradient-to-t from-empire-card via-transparent to-transparent opacity-0 group-hover:opacity-60 transition-opacity duration-500"></div></div>
+          <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-empire-goldDark via-empire-gold to-empire-goldLight transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+        </div>
+        <div class="client-card group relative overflow-hidden rounded-lg border border-empire-border bg-empire-card cursor-default">
+          <div class="relative overflow-hidden"><img src="images/clientes/Frame 5.webp" alt="Thiago Concer — CEO da Sales Club — 500 mil seguidores em 1 ano" class="w-full h-auto block transition-transform duration-700 group-hover:scale-105" loading="lazy" width="600" height="750"><div class="absolute inset-0 bg-gradient-to-t from-empire-card via-transparent to-transparent opacity-0 group-hover:opacity-60 transition-opacity duration-500"></div></div>
+          <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-empire-goldDark via-empire-gold to-empire-goldLight transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+        </div>
+        <div class="client-card group relative overflow-hidden rounded-lg border border-empire-border bg-empire-card cursor-default">
+          <div class="relative overflow-hidden"><img src="images/clientes/Frame 6.webp" alt="Márcio Crisóstomo — Cirurgião Plástico — 120 mil seguidores em 1 ano" class="w-full h-auto block transition-transform duration-700 group-hover:scale-105" loading="lazy" width="600" height="750"><div class="absolute inset-0 bg-gradient-to-t from-empire-card via-transparent to-transparent opacity-0 group-hover:opacity-60 transition-opacity duration-500"></div></div>
+          <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-empire-goldDark via-empire-gold to-empire-goldLight transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+        </div>
+        <div class="client-card group relative overflow-hidden rounded-lg border border-empire-border bg-empire-card cursor-default">
+          <div class="relative overflow-hidden"><img src="images/clientes/Frame 7.webp" alt="Henrique Carolenske — CEO da LSK Brand Builders — 100 mil seguidores em 45 dias" class="w-full h-auto block transition-transform duration-700 group-hover:scale-105" loading="lazy" width="600" height="750"><div class="absolute inset-0 bg-gradient-to-t from-empire-card via-transparent to-transparent opacity-0 group-hover:opacity-60 transition-opacity duration-500"></div></div>
+          <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-empire-goldDark via-empire-gold to-empire-goldLight transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+        </div>
+        <div class="client-card group relative overflow-hidden rounded-lg border border-empire-border bg-empire-card cursor-default">
+          <div class="relative overflow-hidden"><img src="images/clientes/Frame 8.webp" alt="Valtair Justino — Analista de Investimentos — 200 mil seguidores com apenas 1 vídeo" class="w-full h-auto block transition-transform duration-700 group-hover:scale-105" loading="lazy" width="600" height="750"><div class="absolute inset-0 bg-gradient-to-t from-empire-card via-transparent to-transparent opacity-0 group-hover:opacity-60 transition-opacity duration-500"></div></div>
+          <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-empire-goldDark via-empire-gold to-empire-goldLight transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+        </div>
+        <div class="client-card group relative overflow-hidden rounded-lg border border-empire-border bg-empire-card cursor-default">
+          <div class="relative overflow-hidden"><img src="images/clientes/Frame 9.webp" alt="Leonardo Castelo — CEO da 300 Franchising — 200 mil seguidores em 1 ano" class="w-full h-auto block transition-transform duration-700 group-hover:scale-105" loading="lazy" width="600" height="750"><div class="absolute inset-0 bg-gradient-to-t from-empire-card via-transparent to-transparent opacity-0 group-hover:opacity-60 transition-opacity duration-500"></div></div>
+          <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-empire-goldDark via-empire-gold to-empire-goldLight transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+        </div>
+        <div class="client-card group relative overflow-hidden rounded-lg border-gold-gradient bg-empire-card flex flex-col items-center justify-center p-8 text-center min-h-[300px]">
+          <div class="absolute inset-0 bg-gradient-to-br from-empire-gold/5 via-transparent to-empire-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="relative z-10">
+            <div class="w-16 h-16 rounded-full border border-empire-gold/40 flex items-center justify-center mx-auto mb-6 bg-empire-gold/10 group-hover:bg-empire-gold/20 transition-colors duration-300"><svg class="w-7 h-7 text-empire-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg></div>
+            <p class="font-display text-2xl text-empire-text mb-3">O próximo<br>pode ser você</p>
+            <p class="text-empire-text/70 text-sm mb-6 leading-relaxed">Junte-se aos líderes que já construíram autoridade real.</p>
+            <a href="#cta" class="btn-premium text-sm px-6 py-3 inline-block">Quero minha vaga</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-16">
+        <div class="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-6 gap-6 md:gap-8 items-center justify-items-center py-4">
+          <img src="Marcas/1.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
+          <img src="Marcas/2.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
+          <img src="Marcas/3.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
+          <img src="Marcas/4.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
+          <img src="Marcas/5.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
+          <img src="Marcas/6.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
+          <img src="Marcas/7.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
+          <img src="Marcas/8.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
+          <img src="Marcas/9.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
+          <img src="Marcas/10.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
+          <img src="Marcas/12.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
+          <img src="Marcas/14.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
+          <img src="Marcas/15.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
+          <img src="Marcas/19.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
+          <img src="Marcas/20.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
+          <img src="Marcas/21.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
+          <img src="Marcas/22.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
+          <img src="Marcas/23.webp" alt="Marca parceira" class="logo-item h-32 md:h-40 w-auto object-contain" loading="lazy" width="160" height="160">
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+        <div class="text-center p-8 border-gold-gradient"><p class="text-4xl md:text-5xl font-display text-gold-gradient mb-2">+30M</p><p class="text-empire-text/70 text-sm tracking-wide uppercase">pessoas alcançadas</p></div>
+        <div class="text-center p-8 border-gold-gradient"><p class="text-4xl md:text-5xl font-display text-gold-gradient mb-2">100+</p><p class="text-empire-text/70 text-sm tracking-wide uppercase">líderes transformados</p></div>
+        <div class="text-center p-8 border-gold-gradient"><p class="text-4xl md:text-5xl font-display text-gold-gradient mb-2">5</p><p class="text-empire-text/70 text-sm tracking-wide uppercase">fases de aplicação</p></div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="py-24 md:py-32 bg-empire-surface relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-empire-gold/5 to-transparent"></div>
+    <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center relative">
+      <div class="fade-in-up">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-empire-gold/30 bg-empire-gold/5 mb-8">
+          <svg class="w-4 h-4 text-empire-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/></svg>
+          <span class="text-empire-gold text-sm tracking-widest uppercase">Vagas Limitadas</span>
+        </div>
+        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl mb-8">Vagas Limitadas para <span class="text-gold-gradient">Cada Ciclo</span></h2>
+        <div class="text-empire-text/80 text-lg space-y-4 max-w-2xl mx-auto">
+          <p>O Acelerador de Audiência tem vagas limitadas para cada ciclo.</p>
+          <p>É um <span class="text-empire-text">sistema completo de acompanhamento estratégico</span> para construir sua autoridade.</p>
+          <p>Este não é um programa para "postar mais". É um programa para construir um <span class="text-empire-gold">sistema de geração de demanda</span> que aumenta seus leads, vendas e reputação no longo prazo.</p>
+        </div>
+        <div class="mt-12 p-8 border-gold-gradient bg-empire-card/50">
+          <p class="font-display text-2xl text-empire-text mb-2">Conteúdo pode ser replicado.</p>
+          <p class="text-empire-gold text-xl">Identidade, coerência e critério não.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" class="py-24 md:py-32">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+      <div class="mb-16 stagger-children">
+        <div class="text-center mb-10">
+          <p class="text-empire-gold text-sm tracking-widest uppercase mb-2">Nossos Eventos</p>
+          <h3 class="font-display text-2xl md:text-3xl">Onde a autoridade encontra a prática</h3>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+          <div class="relative overflow-hidden rounded-lg aspect-square group"><img src="evento/IMG_2933.webp" alt="Evento Acelerador de Audiência" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="800" height="800"><div class="absolute inset-0 bg-gradient-to-t from-empire-bg/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div></div>
+          <div class="relative overflow-hidden rounded-lg aspect-square group"><img src="evento/IMG_3033.webp" alt="Evento Acelerador de Audiência" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="800" height="800"><div class="absolute inset-0 bg-gradient-to-t from-empire-bg/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div></div>
+          <div class="relative overflow-hidden rounded-lg aspect-square group"><img src="evento/IMG_3144.webp" alt="Evento Acelerador de Audiência" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="800" height="800"><div class="absolute inset-0 bg-gradient-to-t from-empire-bg/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div></div>
+          <div class="relative overflow-hidden rounded-lg aspect-square group"><img src="evento/IMG_3155.webp" alt="Evento Acelerador de Audiência" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="800" height="800"><div class="absolute inset-0 bg-gradient-to-t from-empire-bg/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div></div>
+          <div class="relative overflow-hidden rounded-lg aspect-square group"><img src="evento/IMG_3269.webp" alt="Evento Acelerador de Audiência" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="800" height="800"><div class="absolute inset-0 bg-gradient-to-t from-empire-bg/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div></div>
+          <div class="relative overflow-hidden rounded-lg aspect-square group"><img src="evento/IMG_3341.webp" alt="Evento Acelerador de Audiência" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="800" height="800"><div class="absolute inset-0 bg-gradient-to-t from-empire-bg/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div></div>
+          <div class="relative overflow-hidden rounded-lg aspect-square group"><img src="evento/IMG_3445.webp" alt="Evento Acelerador de Audiência" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="800" height="800"><div class="absolute inset-0 bg-gradient-to-t from-empire-bg/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div></div>
+          <div class="relative overflow-hidden rounded-lg aspect-square group"><img src="evento/IMG_3464.webp" alt="Evento Acelerador de Audiência" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="800" height="800"><div class="absolute inset-0 bg-gradient-to-t from-empire-bg/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div></div>
+          <div class="relative overflow-hidden rounded-lg aspect-square group"><img src="evento/IMG_3503.webp" alt="Evento Acelerador de Audiência" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="800" height="800"><div class="absolute inset-0 bg-gradient-to-t from-empire-bg/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div></div>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8 fade-in-up">
+        <div class="bg-empire-card p-8 border border-empire-border">
+          <h3 class="text-xl font-medium mb-6 text-empire-text">O que já ajudamos nossos clientes a alcançar:</h3>
+          <ul class="space-y-4 text-empire-text/80">
+            <li class="flex items-center gap-3"><svg class="w-5 h-5 text-empire-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>Se tornarem referências reconhecidas em seus mercados</li>
+            <li class="flex items-center gap-3"><svg class="w-5 h-5 text-empire-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>Alcançar quase 30 milhões de pessoas em um único mês</li>
+            <li class="flex items-center gap-3"><svg class="w-5 h-5 text-empire-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>Multiplicar seu share of voice e presença digital</li>
+            <li class="flex items-center gap-3"><svg class="w-5 h-5 text-empire-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>Bater recorde de vendas em meses historicamente fracos</li>
+          </ul>
+        </div>
+        <div class="bg-gradient-to-br from-empire-gold/10 to-empire-gold/5 p-8 border border-empire-gold/30 flex items-center justify-center">
+          <div class="text-center">
+            <p class="text-empire-gold text-sm tracking-widest uppercase mb-4">Nosso Foco</p>
+            <p class="font-display text-3xl md:text-4xl text-empire-text mb-4">Não é volume.</p>
+            <p class="font-display text-3xl md:text-4xl text-gold-gradient">É lastro, confiança e previsibilidade.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="py-24 md:py-32 bg-empire-surface">
+    <div class="max-w-4xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-16 fade-in-up">
+        <p class="text-empire-gold text-sm tracking-widest uppercase mb-4">Dúvidas</p>
+        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl">Perguntas <span class="text-gold-gradient">Frequentes</span></h2>
+      </div>
+      <div class="space-y-4 fade-in-up">
+        <div class="faq-item border-empire-border">
+          <div class="faq-question flex items-center justify-between py-6" onclick="toggleFaq(this)"><h3 class="text-lg font-medium pr-4 text-empire-text">Eu preciso gravar reels?</h3><span class="faq-icon text-empire-gold text-2xl flex-shrink-0">+</span></div>
+          <div class="faq-answer text-empire-text/80">
+            <p><strong class="text-empire-text">Não.</strong> Pelo contrário: você não precisa gravar reels para escalar conteúdo.</p>
+            <p class="mt-4">Nosso método faz o oposto do que todo mundo te diz. Em vez de você sentar toda semana para gravar vídeos curtos que te fazem se sentir idiota, você grava <strong class="text-empire-text">UMA aula de 1 hora</strong> sobre o que você domina. Algo que você já faz naturalmente.</p>
+            <p class="mt-4">Essa aula é transformada em 50+ peças de conteúdo: reels, carrosséis, posts, stories, newsletters. Tudo com sua voz, sua autoridade, sua opinião.</p>
+            <p class="mt-4 text-empire-gold">Porque gravar uma aula sobre o que você sabe é fácil. Forçar um reel de 30 segundos é que é humilhante.</p>
+          </div>
+        </div>
+        <div class="faq-item border-empire-border">
+          <div class="faq-question flex items-center justify-between py-6" onclick="toggleFaq(this)"><h3 class="text-lg font-medium pr-4 text-empire-text">Isso é um curso ou um programa?</h3><span class="faq-icon text-empire-gold text-2xl flex-shrink-0">+</span></div>
+          <div class="faq-answer text-empire-text/80">
+            <p>É um <strong class="text-empire-text">programa de aplicação</strong> — não um curso. Você não assiste aulas gravadas. Você aplica com acompanhamento especializado e personalizado.</p>
+            <table class="mt-4 w-full text-sm">
+              <tr class="border-b border-empire-border/50"><td class="py-2 text-empire-text/60"><strong class="text-empire-text">Curso:</strong> Você consome conteúdo.</td><td class="py-2"><strong class="text-empire-text">Acelerador:</strong> Você aplica e tem resultado.</td></tr>
+              <tr class="border-b border-empire-border/50"><td class="py-2 text-empire-text/60"><strong class="text-empire-text">Curso:</strong> Conteúdo genérico para todos.</td><td class="py-2"><strong class="text-empire-text">Acelerador:</strong> Estratégia construída para o seu negócio.</td></tr>
+              <tr><td class="py-2 text-empire-text/60"><strong class="text-empire-text">Curso:</strong> Você fica sozinho.</td><td class="py-2"><strong class="text-empire-text">Acelerador:</strong> Especialista faz com você.</td></tr>
+            </table>
+            <p class="mt-4">O objetivo não é você ter mais conhecimento. É você ter um sistema de geração de demanda funcionando.</p>
+          </div>
+        </div>
+        <div class="faq-item border-empire-border">
+          <div class="faq-question flex items-center justify-between py-6" onclick="toggleFaq(this)"><h3 class="text-lg font-medium pr-4 text-empire-text">Para quem é o Acelerador de Audiência?</h3><span class="faq-icon text-empire-gold text-2xl flex-shrink-0">+</span></div>
+          <div class="faq-answer text-empire-text/80">
+            <p>O programa foi desenhado para <strong class="text-empire-text">empresários que vendem conhecimento</strong> — consultoria, serviços intelectuais, educação, treinamento:</p>
+            <ul class="mt-3 space-y-2 list-none">
+
+              <li class="flex items-start gap-2"><span class="text-empire-gold mt-1">→</span><span>Já têm <strong class="text-empire-text">time de conteúdo</strong> — mesmo que seja uma pessoa só</span></li>
+              <li class="flex items-start gap-2"><span class="text-empire-gold mt-1">→</span><span>Já tentaram usar redes sociais, mas <strong class="text-empire-text">o Instagram não reflete o sucesso real</strong></span></li>
+              <li class="flex items-start gap-2"><span class="text-empire-gold mt-1">→</span><span>Acordam pensando nos <strong class="text-empire-text">concorrentes que estão crescendo</strong> mais rápido</span></li>
+              <li class="flex items-start gap-2"><span class="text-empire-gold mt-1">→</span><span><strong class="text-empire-text">Recusam-se a gravar reels</strong> ou se transformar em "personagem"</span></li>
+            </ul>
+            <p class="mt-4"><strong class="text-empire-text">NÃO é para:</strong> Quem está começando do zero, não tem ninguém na equipe para executar, ou busca atalhos sem estratégia.</p>
+          </div>
+        </div>
+        <div class="faq-item border-empire-border">
+          <div class="faq-question flex items-center justify-between py-6" onclick="toggleFaq(this)"><h3 class="text-lg font-medium pr-4 text-empire-text">Como funciona o processo de seleção?</h3><span class="faq-icon text-empire-gold text-2xl flex-shrink-0">+</span></div>
+          <div class="faq-answer text-empire-text/80">
+            <p>O Acelerador de Audiência é um programa de aplicação — não é para qualquer um. Avaliamos cada candidato para garantir que:</p>
+            <ol class="mt-3 space-y-2 list-none">
+              <li><strong class="text-empire-text">1. Negócio estabelecido</strong> — não é para quem está começando do zero</li>
+              <li><strong class="text-empire-text">2. Disposição para aplicar</strong> — não apenas consumir conteúdo</li>
+              <li><strong class="text-empire-text">3. Capacidade de implementar</strong> — com ou sem equipe</li>
+            </ol>
+            <p class="mt-4">O processo de seleção existe para garantir que você vai ter resultado — não para dificultar o acesso.</p>
+          </div>
+        </div>
+        <div class="faq-item border-empire-border">
+          <div class="faq-question flex items-center justify-between py-6" onclick="toggleFaq(this)"><h3 class="text-lg font-medium pr-4 text-empire-text">Quanto tempo dura o programa?</h3><span class="faq-icon text-empire-gold text-2xl flex-shrink-0">+</span></div>
+          <div class="faq-answer text-empire-text/80">
+            <table class="w-full text-sm mb-4">
+              <tr class="border-b border-empire-border/50"><td class="py-3"><strong class="text-empire-text">Plano START</strong></td><td class="py-3">8-12 semanas (2-3 meses)</td></tr>
+              <tr class="border-b border-empire-border/50"><td class="py-3"><strong class="text-empire-text">Plano PRO</strong></td><td class="py-3">12-18 semanas (3-4 meses)</td></tr>
+              <tr><td class="py-3"><strong class="text-empire-text">Plano FULL</strong></td><td class="py-3">14-22 semanas (4-5 meses)</td></tr>
+            </table>
+            <p>A duração de cada fase é personalizada de acordo com o seu negócio e ritmo de implementação. O objetivo é você terminar com um sistema funcionando — não cumprir um prazo.</p>
+          </div>
+        </div>
+        <div class="faq-item border-empire-border">
+          <div class="faq-question flex items-center justify-between py-6" onclick="toggleFaq(this)"><h3 class="text-lg font-medium pr-4 text-empire-text">Quem vai me atender no programa?</h3><span class="faq-icon text-empire-gold text-2xl flex-shrink-0">+</span></div>
+          <div class="faq-answer text-empire-text/80">
+            <p>Você será acompanhado por estrategistas do Acelerador de Audiência com experiência em construir sistemas de geração de demanda para líderes de mercado.</p>
+            <p class="mt-4">O atendimento é <strong class="text-empire-text">personalizado e individual</strong> — não é curso gravado, não é mentoria em grupo, não é suporte por ticket. É acompanhamento estratégico dedicado ao seu negócio.</p>
+          </div>
+        </div>
+        <div class="faq-item border-empire-border">
+          <div class="faq-question flex items-center justify-between py-6" onclick="toggleFaq(this)"><h3 class="text-lg font-medium pr-4 text-empire-text">Vocês fazem o conteúdo para mim?</h3><span class="faq-icon text-empire-gold text-2xl flex-shrink-0">+</span></div>
+          <div class="faq-answer text-empire-text/80">
+            <p>Depende da fase:</p>
+            <ul class="mt-3 space-y-2">
+              <li><strong class="text-empire-text">Fase 3 — Mão na Massa:</strong> Ensinamos você a montar o sistema. Você aprende a fazer.</li>
+              <li><strong class="text-empire-text">Fase 4 — Acompanhamento:</strong> Fazemos para você os primeiros conteúdos, mapas de distribuição e roteiros.</li>
+              <li><strong class="text-empire-text">Fase 5 — Transição:</strong> Você assume a execução com autonomia total.</li>
+            </ul>
+            <p class="mt-4">O objetivo não é criar dependência. É criar autonomia. Ao final do programa, você tem um sistema de geração de demanda funcionando sem depender de nós.</p>
+          </div>
+        </div>
+        <div class="faq-item border-empire-border">
+          <div class="faq-question flex items-center justify-between py-6" onclick="toggleFaq(this)"><h3 class="text-lg font-medium pr-4 text-empire-text">Preciso ter equipe para participar?</h3><span class="faq-icon text-empire-gold text-2xl flex-shrink-0">+</span></div>
+          <div class="faq-answer text-empire-text/80">
+            <p>Não é obrigatório, mas é recomendado.</p>
+            <ul class="mt-3 space-y-2">
+              <li><strong class="text-empire-text">Se você TEM equipe:</strong> Treinamos sua equipe para operar o sistema com autonomia. Você define a estratégia, eles executam.</li>
+              <li><strong class="text-empire-text">Se você NÃO TEM equipe:</strong> Você pode executar sozinho inicialmente. O sistema é desenhado para ser delegável quando você estiver pronto.</li>
+            </ul>
+            <p class="mt-4">O programa funciona nos dois cenários. A diferença é a velocidade de escala.</p>
+          </div>
+        </div>
+        <div class="faq-item border-empire-border">
+          <div class="faq-question flex items-center justify-between py-6" onclick="toggleFaq(this)"><h3 class="text-lg font-medium pr-4 text-empire-text">E se eu não tiver tempo para produzir conteúdo?</h3><span class="faq-icon text-empire-gold text-2xl flex-shrink-0">+</span></div>
+          <div class="faq-answer text-empire-text/80">
+            <p>O sistema é desenhado justamente para isso. Com o Mapa de Produção e o Mapa de Distribuição (Fase 3), você produz uma vez e distribui em múltiplos canais.</p>
+            <p class="mt-4">Você define a estratégia e aprova o direcionamento. Sua equipe executa. O foco é construir um sistema de geração de demanda que funciona de forma previsível — sem você precisar estar presente 100% do tempo.</p>
+          </div>
+        </div>
+        <div class="faq-item border-empire-border">
+          <div class="faq-question flex items-center justify-between py-6" onclick="toggleFaq(this)"><h3 class="text-lg font-medium pr-4 text-empire-text">Qual a diferença do Acelerador para uma agência de conteúdo?</h3><span class="faq-icon text-empire-gold text-2xl flex-shrink-0">+</span></div>
+          <div class="faq-answer text-empire-text/80">
+            <table class="w-full text-sm">
+              <tr class="border-b border-empire-border/50"><td class="py-3 text-empire-text/60"><strong class="text-empire-text">Agência:</strong> Cria conteúdo "de fora pra dentro" — baseado em trends.</td><td class="py-3"><strong class="text-empire-text">Acelerador:</strong> Cria "de dentro pra fora" — da sua essência.</td></tr>
+              <tr class="border-b border-empire-border/50"><td class="py-3 text-empire-text/60"><strong class="text-empire-text">Agência:</strong> Exige que você grave reels constantemente.</td><td class="py-3"><strong class="text-empire-text">Acelerador:</strong> Você grava 1 aula. Nós criamos 50+ peças.</td></tr>
+              <tr class="border-b border-empire-border/50"><td class="py-3 text-empire-text/60">Você para de pagar, para de ter resultado.</td><td class="py-3">Você opera com independência.</td></tr>
+              <tr><td class="py-3 text-empire-text/60">Você nunca aprende a operar.</td><td class="py-3">Sistema é seu para sempre.</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="faq-item border-empire-border">
+          <div class="faq-question flex items-center justify-between py-6" onclick="toggleFaq(this)"><h3 class="text-lg font-medium pr-4 text-empire-text">Quais resultados posso esperar?</h3><span class="faq-icon text-empire-gold text-2xl flex-shrink-0">+</span></div>
+          <div class="faq-answer text-empire-text/80">
+            <p>Os resultados variam de acordo com o negócio, o mercado e o ritmo de implementação. O que nossos clientes têm alcançado:</p>
+            <ul class="mt-3 space-y-2">
+              <li class="flex items-start gap-2"><span class="text-empire-gold mt-1">→</span><span><strong class="text-empire-text">Mais leads qualificados</strong> chegando via conteúdo</span></li>
+              <li class="flex items-start gap-2"><span class="text-empire-gold mt-1">→</span><span><strong class="text-empire-text">Aumento na taxa de conversão</strong> — leads chegam já sabendo quem você é</span></li>
+              <li class="flex items-start gap-2"><span class="text-empire-gold mt-1">→</span><span><strong class="text-empire-text">Redução do CAC</strong> — mais eficiência na aquisição</span></li>
+              <li class="flex items-start gap-2"><span class="text-empire-gold mt-1">→</span><span><strong class="text-empire-text">Demanda previsível via conteúdo</strong></span></li>
+              <li class="flex items-start gap-2"><span class="text-empire-gold mt-1">→</span><span><strong class="text-empire-text">Reconhecimento de mercado</strong></span></li>
+            </ul>
+            <p class="mt-4">O programa não promete milagres. Promete um sistema estruturado que, quando aplicado, gera resultados concretos.</p>
+          </div>
+        </div>
+        <div class="faq-item border-empire-border">
+          <div class="faq-question flex items-center justify-between py-6" onclick="toggleFaq(this)"><h3 class="text-lg font-medium pr-4 text-empire-text">Meu nicho é diferente. Isso vai funcionar para mim?</h3><span class="faq-icon text-empire-gold text-2xl flex-shrink-0">+</span></div>
+          <div class="faq-answer text-empire-text/80">
+            <p>Já implementamos em nichos "impossíveis":</p>
+            <ul class="mt-3 space-y-1">
+              <li class="flex items-start gap-2"><span class="text-empire-gold mt-1">→</span>Direito tributário</li>
+              <li class="flex items-start gap-2"><span class="text-empire-gold mt-1">→</span>Engenharia industrial</li>
+              <li class="flex items-start gap-2"><span class="text-empire-gold mt-1">→</span>Consultoria B2B</li>
+              <li class="flex items-start gap-2"><span class="text-empire-gold mt-1">→</span>Medicina especializada</li>
+              <li class="flex items-start gap-2"><span class="text-empire-gold mt-1">→</span>Software enterprise</li>
+            </ul>
+            <p class="mt-4">O que todos têm em comum? Não eram "nichos de Instagram". O que mudou? A abordagem. Quando pararam de tentar ser "Instagrammer" e começaram a escalar conhecimento, descobriram que o cérebro humano funciona igual em todos os nichos.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="cta" class="py-24 md:py-32 relative overflow-hidden">
+    <div class="hero-bg opacity-20"></div>
+    <div class="grid-pattern absolute inset-0 opacity-30"></div>
+    <div class="absolute inset-0 pointer-events-none"><div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(201,169,98,0.07) 0%,transparent 70%);border-radius:50%;"></div></div>
+    <div class="max-w-2xl mx-auto px-6 lg:px-8 relative">
+      <div class="fade-in-up text-center mb-10">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-empire-gold/40 bg-empire-gold/8 mb-6">
+          <span class="w-2 h-2 bg-empire-gold rounded-full animate-pulse"></span>
+          <span class="text-empire-gold text-xs tracking-widest uppercase font-medium">Aplicação Oficial — Ciclo 2026</span>
+        </div>
+        <h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-5">Solicite sua <span class="text-gold-gradient">vaga agora</span></h2>
+        <p class="text-empire-text/80 text-lg max-w-lg mx-auto">Vagas limitadas por ciclo. Preencha o formulário abaixo — leva menos de 2 minutos.</p>
+      </div>
+      <div class="relative rounded-2xl overflow-hidden" style="border:1px solid rgba(201,169,98,0.25);background:rgba(17,17,19,0.95);box-shadow:0 0 60px rgba(201,169,98,0.08),0 24px 64px rgba(0,0,0,0.5);">
+        <div style="height:3px;background:linear-gradient(90deg,transparent,#c9a962,#e4d4a5,#c9a962,transparent);"></div>
+        <div class="text-center pt-8 pb-2 px-8">
+          <div class="inline-flex flex-col items-center gap-2">
+            <span class="text-empire-gold text-sm font-medium tracking-wide uppercase">Preencha o formulário abaixo</span>
+            <svg class="w-5 h-5 text-empire-gold animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+        </div>
+        <div class="px-4 pb-6">
+          <iframe src="https://l.empirebusiness.com.br/widget/survey/3Qz7uTLUJyMYA1D3rIJr" style="border:none;width:100%;" scrolling="no" id="3Qz7uTLUJyMYA1D3rIJr" title="survey"></iframe>
+          <script src="https://l.empirebusiness.com.br/js/form_embed.js" defer></script>
+        </div>
+        <div style="height:1px;background:linear-gradient(90deg,transparent,rgba(201,169,98,0.3),transparent);"></div>
+      </div>
+      <p class="text-center text-empire-text/60 text-xs mt-6 tracking-wide">Suas informações são confidenciais e nunca serão compartilhadas.</p>
+    </div>
+  </section>
+
+  <footer class="py-12 bg-empire-bg border-t border-empire-border">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-4"><img src="images/logos/Logotipo 04.webp" alt="Acelerador de Audiência" class="h-8 w-auto" loading="lazy" width="128" height="32"></div>
+        <div class="flex items-center gap-6 text-empire-text/70 text-sm">
+          <a href="#" class="hover:text-empire-gold transition-colors">Política de Privacidade</a>
+          <span class="text-empire-border">|</span>
+          <a href="#" class="hover:text-empire-gold transition-colors">Termos de Uso</a>
+          <span class="text-empire-border">|</span>
+          <a href="#" class="hover:text-empire-gold transition-colors">Contato</a>
+        </div>
+        <p class="text-empire-text/70 text-sm">2026 Acelerador de Audiência. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const closeMenuBtn = document.getElementById('close-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.add('active'); });
+    closeMenuBtn.addEventListener('click', () => { mobileMenu.classList.remove('active'); });
+    mobileMenu.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.remove('active'); }); });
+    function toggleFaq(element) {
+      const faqItem = element.parentElement;
+      const isActive = faqItem.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(item => { item.classList.remove('active'); });
+      if (!isActive) { faqItem.classList.add('active'); }
+    }
+    const observerOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); } });
+    }, observerOptions);
+    document.querySelectorAll('.fade-in-up, .stagger-children').forEach(el => { observer.observe(el); });
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const headerOffset = 80;
+          const elementPosition = target.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
